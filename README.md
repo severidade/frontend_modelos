@@ -24,11 +24,11 @@ Estou consumindo dados da API REST do WordPress
 - [x] Adicionar a chave ``"type": "module"`` ao arquivo package.json
 
 ##### Adicionar um bundler dev-server
-- [ ] Instalar o Vite com o comando ``npm i vite``;
-- [ ] Adicionar a chave ``"dev": "vite --open"`` à chave "scripts" do arquivo package.json;
+- [X] Instalar o Vite com o comando ``npm i vite``;
+- [X] Adicionar a chave ``"dev": "vite --open"`` à chave "scripts" do arquivo package.json;
 
 ##### Instalar e configurar o ESLint
-- [ ] Execute o comando ``npm init @eslint/config`` e siga o passo a passo que aparecerá no terminal.
+- [X] Execute o comando ``npm init @eslint/config`` e siga o passo a passo que aparecerá no terminal.
   </details>
 
 
