@@ -29,6 +29,16 @@ body {
   padding-bottom: var(--default-gap);
 }
 
+main{
+  width: var(--mobile-width);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--default-gap);
+}
+
 .app_title  {
   font-family: 'Kalnia', serif;
   font-weight: 700;
