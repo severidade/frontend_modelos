@@ -1,0 +1,13 @@
+{
+  "name": "frontend_modelos",
+  "version": "1.0.0",
+  "description": "Modelo de requisições assíncronas utilizando async/await.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

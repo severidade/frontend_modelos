@@ -13,15 +13,15 @@ Estou consumindo dados da API REST do WordPress
 
 ##### Iniciando o Projeto com NPM
 
-- [ ] Criar o diretório do projeto;
-- [ ] Criar o diretório ``src/`` dentro do diretório do projeto;
-- [ ] Criar o arquivo ``main.js`` no diretório src/;
-- [ ] Criar o arquivo ``index.html`` na raiz do projeto;
-- [ ] Executar o comando ``npm init -y`` ou ``npm init`` para criar o package.json;
+- [x] Criar o diretório do projeto;
+- [x] Criar o diretório ``src/`` dentro do diretório do projeto;
+- [x] Criar o arquivo ``main.js`` no diretório src/;
+- [x] Criar o arquivo ``index.html`` na raiz do projeto;
+- [x] Executar o comando ``npm init -y`` ou ``npm init`` para criar o package.json;
 
 ##### Configurar o projeto para utilizar a sintaxe ES Modules
-- [ ] Adicionar a linha ``<script type="module" src="./src/main.js"></script>`` no arquivo html;
-- [ ] Adicionar a chave ``"type": "module"`` ao arquivo package.json
+- [x] Adicionar a linha ``<script type="module" src="./src/main.js"></script>`` no arquivo html;
+- [x] Adicionar a chave ``"type": "module"`` ao arquivo package.json
 
 ##### Adicionar um bundler dev-server
 - [ ] Instalar o Vite com o comando ``npm i vite``;
