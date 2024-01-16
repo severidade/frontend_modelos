@@ -1,4 +1,19 @@
 import '../src/css/reset.css';
 import '../src/css/style.css';
+import { getBlogData } from './services/api';
 
-console.log("olá mundo");
+
+export async function renderBlogData() {
+  const postsElement = document.querySelector('#container');
+  postsElement.innerHTML = '';
+
+  try {
+    const [posts] = await getBlogData();
+   
+    console.log(posts);
+  } catch (err) {
+    console.warn('ERROR: ', err);
+  }
+}
+
+renderBlogData();
