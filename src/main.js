@@ -1,6 +1,7 @@
 import '../src/css/reset.css';
 import '../src/css/style.css';
 import { getBlogData } from './services/api';
+import { createCard } from './componentes/createCard';
 
 
 export async function renderBlogData() {
@@ -9,8 +10,9 @@ export async function renderBlogData() {
 
   try {
     const [posts] = await getBlogData();
-   
-    console.log(posts);
+    posts.forEach(post => {
+      postsElement.appendChild(createCard(post));
+    });
   } catch (err) {
     console.warn('ERROR: ', err);
   }
