@@ -29,6 +29,7 @@ Estou consumindo dados da API REST do WordPress
 
 ##### Instalar e configurar o ESLint
 - [X] Execute o comando ``npm init @eslint/config`` e siga o passo a passo que aparecerá no terminal.
+- [x] instalar o lint da trybe ``npm i @trybe/eslint-config-frontend``
   </details>
 
 
