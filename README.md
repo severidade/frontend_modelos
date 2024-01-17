@@ -4,7 +4,14 @@
 - Estou utilizando o ``try/catch`` para tratar erros;
 - Escrevi testes para códigos assíncronos utilizando ``async/await``.
 
-Estou consumindo dados da API REST do WordPress 
+Estou consumindo dados da API REST do WordPress
+OBS: ainda nao escrevi os testes para a aplicação.
+
+<div class="destaque-box" style="background: #a9a9a9; padding: 10px; border-radius: 5px; display: flex; align-items: flex-start;">
+  <div class="icone" style="margin-right: 10px;">💻</div>
+  <a href="http://modeloassincrono.severidade.com.br">Deploy da Aplicação</a>
+</div>
+<br>
 
 ## Configurando o ambiente
 
