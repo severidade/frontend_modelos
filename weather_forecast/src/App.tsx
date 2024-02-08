@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import './CSS/reset.css';
+import './CSS/style.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <h1>severo</h1>
+    <main>
+      <h2 className="app_title">Componentes | Props | Typescript</h2>
+      <p>Início do projeto de previsão do tempo</p>
+    </main>
   );
 }
 
