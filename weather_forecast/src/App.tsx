@@ -1,10 +1,11 @@
 import './CSS/reset.css';
 import './CSS/style.css';
+import Header from './componentes/Header.tsx';
 
 function App() {
   return (
     <main>
-      <h2 className="app_title">Componentes | Props | Typescript</h2>
+      <Header title="Previsão 360" />
       <p>Início do projeto de previsão do tempo</p>
     </main>
   );
