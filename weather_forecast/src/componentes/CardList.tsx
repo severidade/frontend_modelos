@@ -1,7 +1,12 @@
+import Card from './Card';
+import WeatherData from '../data/WeatherData.tsx';
+
 function CardList() {
   return (
     <div className="card-list">
-      <p>Um card aqui</p>
+      <Card data={ WeatherData[0] } />
+      <Card data={ WeatherData[1] } />
+      <Card data={ WeatherData[2] } />
     </div>
   );
 }
