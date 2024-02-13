@@ -1,4 +1,6 @@
-const weatherData = [
+import { WeatherType } from '../types/WeatherType';
+
+const weatherData: WeatherType[] = [
   {
     id: 1,
     weekday: 'Monday',
@@ -14,7 +16,7 @@ const weatherData = [
       min: 19,
       max: 25,
     },
-    weather: '🌥️',
+    weather: 'cloudy',
     isSunny: false,
   },
   {
@@ -32,7 +34,7 @@ const weatherData = [
       min: 20,
       max: 28,
     },
-    weather: '☀️',
+    weather: 'sunny',
     isSunny: true,
   },
   {
@@ -50,7 +52,7 @@ const weatherData = [
       min: 18,
       max: 26,
     },
-    weather: '🌧️',
+    weather: 'rainy',
     isSunny: false,
   },
   {
@@ -68,7 +70,7 @@ const weatherData = [
       min: 22,
       max: 30,
     },
-    weather: '⛈️',
+    weather: 'thunder',
     isSunny: false,
   },
   {
@@ -86,7 +88,7 @@ const weatherData = [
       min: 24,
       max: 32,
     },
-    weather: '🌦️',
+    weather: 'rainy',
     isSunny: false,
   },
   {
@@ -122,7 +124,7 @@ const weatherData = [
       min: 20,
       max: 28,
     },
-    weather: '☀️',
+    weather: 'cloudy',
     isSunny: true,
   },
 ];

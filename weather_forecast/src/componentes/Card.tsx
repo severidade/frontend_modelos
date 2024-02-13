@@ -1,30 +1,21 @@
-type CardProps = {
-  data: {
-    id: number;
-    weekday: string;
-    date: {
-      month: string;
-      day: number;
-    };
-    temp: {
-      min: number;
-      max: number;
-    };
-    humidity: {
-      min: number;
-      max: number;
-    };
-    weather: string;
-    isSunny: boolean;
-  };
-};
+import { WeatherType } from '../types/WeatherType';
 
-function Card({ data }: CardProps) {
+function Card({ data }: { data: WeatherType }) {
+  const weatherIcon = `icon ${data.weather} `;
+
   return (
     <div className="card">
+      <div className={ weatherIcon }>
+        icon
+        {' '}
+        { data.weather }
+      </div>
       <h1>
-        {data.weather}
         { data.weekday }
+        <strong>
+          {' '}
+          { data.weather }
+        </strong>
       </h1>
       <p>
         { data.date.month }

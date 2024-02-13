@@ -7,6 +7,7 @@ function CardList() {
       <Card data={ WeatherData[0] } />
       <Card data={ WeatherData[1] } />
       <Card data={ WeatherData[2] } />
+      <Card data={ WeatherData[3] } />
     </div>
   );
 }

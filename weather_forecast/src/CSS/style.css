@@ -59,6 +59,7 @@ h2 {
 
 h1 {
   font-size: 3em;
+  text-transform: capitalize;
 }
 
 p {
@@ -74,8 +75,35 @@ p {
 }
 
 .card {
-  background-color: lightgreen;
+  background-color: rgba(255, 255, 255, 0.452);
   border-radius: 5px;
   padding: 40px;
   width: 300px;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+
+.icon.cloudy {
+  background: url("../assets/icon/animated/cloudy-day-3.svg") no-repeat center;
+  background-size: contain;
+}
+
+.icon.sunny {
+  background: url("../assets/icon/animated/day.svg") no-repeat center;
+  background-size: contain;
+}
+
+.icon.rainy {
+  background: url("../assets/icon/animated/rainy-2.svg") no-repeat center;
+  background-size: contain;
+}
+
+.icon.thunder {
+  background: url("../assets/icon/animated/thunder.svg") no-repeat center;
+  background-size: contain;
 }
