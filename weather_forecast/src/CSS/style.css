@@ -57,10 +57,7 @@ h2 {
   margin-bottom: var(--default-gap);
 }
 
-h1 {
-  font-size: 3em;
-  text-transform: capitalize;
-}
+
 
 p {
   font-size: 2rem;
@@ -81,29 +78,61 @@ p {
   width: 300px;
 }
 
+.heder_card {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed black;
+}
+
+.card_title {
+  font-size: 28px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.card_subtitle{
+  font-size: 16px;
+  display: flex;
+  gap: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.card_subtitle strong {
+  /* background-color: #f7c130; */
+  /* font-weight: 400; */
+}
+
+.date {
+  font-size: 20px;
+  text-align: right;
+}
+
+
 .icon {
-  width: 90px;
-  height: 90px;
+  width: 64px;
+  height: 64px;
   overflow: hidden;
   text-indent: -1000px;
 }
 
 .icon.cloudy {
-  background: url("../assets/icon/animated/cloudy-day-3.svg") no-repeat center;
-  background-size: contain;
+  background: url("../assets/icon/animated/cloudy-day-3.svg") no-repeat top center/contain;
 }
 
 .icon.sunny {
-  background: url("../assets/icon/animated/day.svg") no-repeat center;
-  background-size: contain;
+  background: url("../assets/icon/animated/day.svg") no-repeat top center/contain;
 }
 
 .icon.rainy {
-  background: url("../assets/icon/animated/rainy-2.svg") no-repeat center;
-  background-size: contain;
+  background: url("../assets/icon/animated/rainy-2.svg") no-repeat top /contain;
 }
 
 .icon.thunder {
-  background: url("../assets/icon/animated/thunder.svg") no-repeat center;
-  background-size: contain;
+  background: url("../assets/icon/animated/thunder.svg") no-repeat top center/contain;
 }

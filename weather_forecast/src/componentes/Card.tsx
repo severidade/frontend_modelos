@@ -5,23 +5,24 @@ function Card({ data }: { data: WeatherType }) {
 
   return (
     <div className="card">
-      <div className={ weatherIcon }>
-        icon
-        {' '}
-        { data.weather }
-      </div>
-      <h1>
-        { data.weekday }
-        <strong>
+      <div className="heder_card">
+        <div className={ weatherIcon }>
+          icon
           {' '}
           { data.weather }
-        </strong>
-      </h1>
-      <p>
-        { data.date.month }
-        {' '}
-        { data.date.day }
-      </p>
+        </div>
+        <div className="card_title">
+          { data.weekday }
+          <p className="card_subtitle">
+            <strong>
+              { data.date.month }
+              {' '}
+              { data.date.day }
+            </strong>
+            { data.weather }
+          </p>
+        </div>
+      </div>
       <div className="container_temperature">
         <h2>Temperature</h2>
         <p>{data.temp.max}</p>
