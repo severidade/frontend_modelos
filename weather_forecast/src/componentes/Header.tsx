@@ -10,7 +10,9 @@ function Header({ title } : HeaderProps) {
         { title }
         {' '}
       </h1>
-      <p>Modelo de Componentes | Uso de Props | Primeiros passos com Typescript</p>
+      <p className="app_sub_title">
+        Modelo de Componentes | Uso de Props | Primeiros passos com Typescript
+      </p>
     </header>
   );
 }
