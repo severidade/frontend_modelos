@@ -4,7 +4,9 @@ import WeatherData from '../data/WeatherData.tsx';
 function CardList() {
   return (
     <div className="card-list">
-      <Card data={ WeatherData[0] } />
+      { WeatherData.map(
+        (card) => <Card key={ card.id } data={ card } />,
+      )}
     </div>
   );
 }

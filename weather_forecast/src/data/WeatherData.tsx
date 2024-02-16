@@ -9,24 +9,6 @@ const weatherData: WeatherType[] = [
       day: 20,
     },
     temp: {
-      min: 19,
-      max: 25,
-    },
-    humidity: {
-      min: 19,
-      max: 25,
-    },
-    weather: 'cloudy',
-    isSunny: false,
-  },
-  {
-    id: 2,
-    weekday: 'Tuesday',
-    date: {
-      month: 'Jan',
-      day: 21,
-    },
-    temp: {
       min: 18,
       max: 24,
     },
@@ -36,6 +18,24 @@ const weatherData: WeatherType[] = [
     },
     weather: 'sunny',
     isSunny: true,
+  },
+  {
+    id: 2,
+    weekday: 'Tuesday',
+    date: {
+      month: 'Jan',
+      day: 21,
+    },
+    temp: {
+      min: 19,
+      max: 25,
+    },
+    humidity: {
+      min: 19,
+      max: 25,
+    },
+    weather: 'cloudy',
+    isSunny: false,
   },
   {
     id: 3,
@@ -106,7 +106,7 @@ const weatherData: WeatherType[] = [
       min: 20,
       max: 28,
     },
-    weather: '☀️',
+    weather: 'sunny',
     isSunny: true,
   },
   {
