@@ -14,24 +14,24 @@ function Card({ data }: { data: WeatherType }) {
         <div className="card_title">
           { data.weekday }
           <p className="card_subtitle">
+            { data.date.month }
+            {' '}
+            { data.date.day }
             <strong>
-              { data.date.month }
-              {' '}
-              { data.date.day }
+              { data.weather }
             </strong>
-            { data.weather }
           </p>
         </div>
       </div>
       <div className="container_temperature">
-        <h2>Temperature</h2>
-        <p>{data.temp.max}</p>
-        <p>{data.temp.min}</p>
+        <h2 className="data-title">Temperature</h2>
+        <p className="data_max">{data.temp.max}</p>
+        <p className="data_min">{data.temp.min}</p>
       </div>
       <div className="container_humidity">
-        <h2>Humidity</h2>
-        <p>{data.temp.max}</p>
-        <p>{data.temp.min}</p>
+        <h2 className="data-title">Humidity</h2>
+        <p className="data_max">{data.temp.max}</p>
+        <p className="data_min">{data.temp.min}</p>
       </div>
 
     </div>
