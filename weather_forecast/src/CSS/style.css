@@ -25,20 +25,22 @@ body {
   font-weight: 300;
   color: var(--color-text);
   font-size: 1.6rem;
-  padding-top: var(--default-gap);
-  padding-bottom: var(--default-gap);
+  /* padding-top: var(--default-gap);
+  padding-bottom: var(--default-gap); */
 }
 
 main{
   width: 100VW;
   max-width: 100%;
+  min-height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: var(--default-gap);
-  
+  gap: 100px;
+  border: solid tomato;
+  padding-top: 5vh;
 }
 
 /* INÍCIO do Heder */
@@ -65,26 +67,31 @@ header {
 
 /* INICIO CARDS */
 .card-list {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-  overflow: hidden;
+  width: 90vw;
   padding: 0 5vw;
   border: solid 1px navy;
-  flex-wrap: wrap;
+}
+
+.slider-container {
+  margin: 0 -10px; 
+}
+
+.slider-item {
+  padding: 0 10px;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.70);
   border-radius: 5px;
   padding: 20px;
-  width: clamp(300px, 30%, 400px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   color: #3f3f3f;
   font-weight: 400;
   z-index: -2;
+  position: relative;
 }
 
 .heder_card {
@@ -151,7 +158,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .data-title {

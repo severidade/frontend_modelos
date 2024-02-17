@@ -6,7 +6,7 @@ import Header from './componentes/Header.tsx';
 function App() {
   return (
     <main>
-      <Header title="Previsão 360" />
+      <Header title="Weather 360" />
       <CardList />
     </main>
   );
