@@ -1,0 +1,73 @@
+footer {
+  width: 100%;
+  color: white;
+  z-index: 1;
+}
+
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.titulo  {
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.menu_social {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+  list-style-type: none;
+}
+
+.social_linkedin, .social_github, .social_behance {
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: -1000%;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.social_linkedin {
+  background-image: url("./icon/linkedin.png");
+}
+
+.social_github {
+  background-image: url("./icon/github.png");
+}
+
+/* a.social_codpen {
+  background-image: url("http://severidade.com.br/codpenio/smile_slider/codpen.svg");
+  background-size: 90%;
+} */
+
+.social_behance {
+  background-image: url("./icon/behance.png");
+  background-size: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.modal::before{
+		content: "";
+    width: 200%;
+    height: 200%;
+    transform: translate(-48%, -30%) rotate(90deg);
+    z-index: -2;
+	}
+}
+
+@media screen and (max-height: 580px) {
+  footer {
+    display: none;
+  }
+}
