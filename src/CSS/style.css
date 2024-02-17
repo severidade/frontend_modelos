@@ -38,15 +38,15 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 100px;
-  border: solid tomato;
+  gap: 40px;
+  /* border: solid tomato; */
   padding-top: 5vh;
 }
 
 /* INÍCIO do Heder */
 
 header {
-  border: solid 1px lime;
+  /* border: solid 1px lime; */
   width: 90vw;
 }
 
@@ -69,7 +69,7 @@ header {
 .card-list {
   width: 90vw;
   padding: 0 5vw;
-  border: solid 1px navy;
+  /* border: solid 1px navy; */
 }
 
 .slider-container {
