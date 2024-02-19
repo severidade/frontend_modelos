@@ -125,7 +125,7 @@ const weatherData: WeatherType[] = [
       max: 28,
     },
     weather: 'cloudy',
-    isSunny: true,
+    isSunny: false,
   },
 ];
 
