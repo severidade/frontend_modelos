@@ -1,12 +1,12 @@
 import { WeatherType } from '../types/WeatherType';
 
 function Card({ data }: { data: WeatherType }) {
-  const weatherIcon = `icon ${data.weather} `;
+  const weatherIconClassName = `icon ${data.weather} `;
 
   return (
     <div className="card">
       <div className="heder_card">
-        <div className={ weatherIcon }>
+        <div className={ weatherIconClassName }>
           icon
           {' '}
           { data.weather }
