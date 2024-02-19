@@ -87,6 +87,7 @@ header {
   font-weight: 400;
   z-index: -2;
   position: relative;
+  overflow: hidden;
 }
 
 .heder_card {
@@ -98,6 +99,7 @@ header {
   flex-direction: column-reverse;
   padding-bottom: 10px;
   border-bottom: 1px dashed black;
+  z-index: 3;
 }
 
 .card_title {
@@ -190,6 +192,31 @@ header {
 .data_min:before {
   content: "MIN";
   grid-row: 2 / 3;
+}
+
+/* QUANDO É FINAL DE SEMANA */
+
+.card.is_weekend:after {
+  content: "";
+  position: absolute;
+  background-image: url(../assets/img/sand.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 226px;
+  z-index: -1;
+  mix-blend-mode: difference;
+}
+
+.card.is_weekend .card_title {
+  color: var(--color-text);
+}
+
+.card.is_weekend  .heder_card {
+  border: none;
 }
 
 /* Carrossel estilos */

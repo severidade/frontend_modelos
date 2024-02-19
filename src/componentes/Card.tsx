@@ -3,8 +3,10 @@ import { WeatherType } from '../types/WeatherType';
 function Card({ data }: { data: WeatherType }) {
   const weatherIconClassName = `icon ${data.weather} `;
 
+  const cardClassName = `card ${data.isSunny ? 'is_sunny' : ''} ${data.weekday === 'Saturday' || data.weekday === 'Sunday' ? 'is_weekend' : ''}`.trim();
+
   return (
-    <div className="card">
+    <div className={ cardClassName }>
       <div className="heder_card">
         <div className={ weatherIconClassName }>
           icon
