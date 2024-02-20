@@ -9,12 +9,30 @@ function CardList() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     // centerMode: true, se eu quiser deixar um pedaço das cartas antes e depois aparecendo
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },     
+      {
+        breakpoint: 1260,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 930,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -23,7 +41,7 @@ function CardList() {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
