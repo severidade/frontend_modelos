@@ -6,6 +6,7 @@ font-family: 'Lato', sans-serif; */
 
 :root {
   --color-text: #ffffff;
+  --color-transparente: #ffffff00;
   --color-title: #f7c130;
   --color-cta: #ff6347;
   --color-dark: #030c1a;
@@ -37,4 +38,5 @@ h3 {
   font-style: normal;
   color: var(--color-title);
   font-size: 90px;
+  /* -webkit-text-stroke: 2px var(--color-text); */
 }
