@@ -1,4 +1,4 @@
-export type SneekerType = {
+export type SnekerType = {
   id: number,
   manufacturer?: string,
   title: string,

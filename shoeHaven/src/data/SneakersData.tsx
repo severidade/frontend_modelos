@@ -1,4 +1,4 @@
-import { SneekerType } from '../types/SneakerType';
+import { SnekerType } from '../types/SneakerType';
 
 import tenis01 from '../assets/sneakers/01.png';
 import tenis02 from '../assets/sneakers/02.png';
@@ -7,7 +7,7 @@ import tenis04 from '../assets/sneakers/04.png';
 import tenis05 from '../assets/sneakers/05.png';
 import tenis06 from '../assets/sneakers/06.png';
 
-const SneekerList: SneekerType[] = [
+const SnekerList: SnekerType[] = [
   {
     id: 1,
     manufacturer: 'Nike',
@@ -52,4 +52,4 @@ const SneekerList: SneekerType[] = [
   },
 ];
 
-export default SneekerList;
+export default SnekerList;

@@ -1,9 +1,9 @@
-import { SneekerType } from '../../types/SneakerType';
+import { SnekerType } from '../../types/SneakerType';
 
-function SneakerList({ sneakers }: { sneakers: SneekerType[] }) {
+function SneakerList({ sneakers }: { sneakers: SnekerType[] }) {
   return (
     <section>
-      <p> Aqui lista todos os cards </p>
+      {/* <p> Aqui lista todos os cards </p> */}
 
       <div>
         <h2 className="sneaker_price">
