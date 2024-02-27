@@ -6,12 +6,12 @@ jobs:
   deploy-front:
     runs-on: ubuntu-latest
     environment:
-      name: shoehaven
+      name: model_shoe
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       # Criação do build
       - name: Setup node 
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: v20.10.0
       - run: npm install
