@@ -15,6 +15,8 @@ font-family: 'Lato', sans-serif; */
   --default-gap: 20px;
   --mobile-width: 90vw;
   --desktop-width: 50vw;
+
+  --image-shadow: drop-shadow(16px 16px 14px #000000);
 }
 
 body {
@@ -30,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 h3 {
@@ -41,12 +44,42 @@ h3 {
   /* -webkit-text-stroke: 2px var(--color-text); */
 }
 
-.sneaker_price {
+.sneaker_tile {
+  display: block;
   font-size: 40px;
   font-family: "Anton", sans-serif;
+  position: absolute;
+}
+
+h2.sneaker_tile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  font-size: 99px;
+  line-height: 1;
+  -webkit-text-stroke: 1px var(--color-text);
+  color: var(--color-transparente);
+  z-index: 9;
 }
 
 .card {
   border: solid 2px var(--color-title);
-  width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+figure {
+  width: 100%;
+  border: 1px solid #ff6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  filter: var(--image-shadow);
+  transform: rotateX('24deg');
+  transform: rotate(-15deg);
 }

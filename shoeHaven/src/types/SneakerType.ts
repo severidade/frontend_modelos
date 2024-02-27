@@ -1,4 +1,4 @@
-export type SnekerType = {
+export type SneakerType = {
   id: number,
   manufacturer?: string,
   title: string,
