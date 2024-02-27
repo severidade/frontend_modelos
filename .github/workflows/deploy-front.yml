@@ -1,0 +1,30 @@
+name: CI -> Deploy to My website
+on:
+  push:
+    branches: [ shoe_haven ]
+jobs:
+  deploy-front:
+    runs-on: ubuntu-latest
+    environment:
+      name: shoes
+    steps:
+      - uses: actions/checkout@v4
+      # Criação do build
+      - name: Setup node 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npm run build
+      - run: cp .htaccess ./build
+
+      # Deploy do front
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: ${{ secrets.FTP_LOCAL_DIR}}
+          remote_dir: ${{ secrets.FTP_REMOTE_DIR}}
+          delete: "false"

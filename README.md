@@ -1,6 +1,8 @@
 # Shoe Haven
 Esta aplicação fará uso de CSS Módules para estilização dos componetes, Props Children e servirá também para implementar uma nova froma de utilizar imagens nos componentes. 
 
+deploy
+
 ### 📝 Iniciando um projeto React com Vite
   
 <details>
