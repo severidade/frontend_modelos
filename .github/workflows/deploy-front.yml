@@ -8,12 +8,12 @@ jobs:
     environment:
       name: shoes
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # Criação do build
       - name: Setup node 
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: v20.10.0
+          node-version: '20'
       - run: npm install
       - run: npm run build
       - run: cp .htaccess ./dist
