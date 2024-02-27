@@ -3,12 +3,12 @@ import Footer from './componentes/Footer';
 import Sneakers from './data/SneakersData';
 
 import SneakerList from './componentes/SneakerList';
+import Header from './componentes/Header';
 
 function App() {
   return (
     <div className="main">
-      <h3>SHOE HAVEN</h3>
-      <p>Esta Aplicação fará uso de CSS Módules e Props Children</p>
+      <Header />
       <SneakerList sneakers={ Sneakers } />
       <Footer />
     </div>
