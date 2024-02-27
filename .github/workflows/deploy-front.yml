@@ -1,24 +1,25 @@
 name: CI -> Deploy to My website
 on:
   push:
-    branches: [ shoe_haven ]
+    branches: [ react_props_typescript ]
 jobs:
   deploy-front:
     runs-on: ubuntu-latest
     environment:
       name: shoes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       # Criação do build
       - name: Setup node 
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: v20.10.0
       - run: npm install
       - run: npm run build
-      - run: cp .htaccess ./build
-
+      - run: cp .htaccess ./dist
+      
       # Deploy do front
+      
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
