@@ -11,7 +11,7 @@ function Header({ title } : HeaderProps) {
         {' '}
       </h1>
       <p className="app_sub_title">
-        Componentes React | Uso de Props | Typescripts
+        Componentes React | Uso de Props | Typescript
       </p>
     </header>
   );
