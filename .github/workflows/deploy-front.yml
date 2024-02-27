@@ -1,7 +1,7 @@
 name: CI -> Deploy to My website
 on:
   push:
-    branches: [ react_props_typescript ]
+    branches: [ shoe_haven ]
 jobs:
   deploy-front:
     runs-on: ubuntu-latest
