@@ -45,3 +45,8 @@ h3 {
   font-size: 40px;
   font-family: "Anton", sans-serif;
 }
+
+.card {
+  border: solid 2px var(--color-title);
+  width: 400px;
+}
