@@ -25,5 +25,11 @@ figure {
 img {
   filter: var(--image-shadow);
   transform: rotateX('24deg');
-  transform: rotate(-15deg);
+  transform: rotate(10deg);
+  transition: transform 2s ease;
+}
+
+
+.slick-slide.slick-active.slick-current img{
+  transform: rotate(-10deg);
 }

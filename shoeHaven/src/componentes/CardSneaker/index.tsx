@@ -1,6 +1,6 @@
 import { SneakerType } from '../../types/SneakerType';
 
-import styles from './CardSneaker.module.css';
+import './CardSneaker.css';
 
 function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
   const {
@@ -12,14 +12,14 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
   } = sneakerItem;
 
   return (
-    <div className={ styles.card }>
-      <h1 className={ styles.sneaker_tile }>{ title }</h1>
-      <h2 className={ styles.sneaker_short_title }>{ shortTitile }</h2>
+    <div className="card">
+      <h1 className="sneaker_tile">{ title }</h1>
+      <h2 className="sneaker_short_title">{ shortTitile }</h2>
       <p>{ manufacturer}</p>
       <figure>
         <img src={ image } alt="" />
       </figure>
-      <p className={ styles.sneaker_price }>{price}</p>
+      <p className="sneaker_price">{price}</p>
     </div>
   );
 }
