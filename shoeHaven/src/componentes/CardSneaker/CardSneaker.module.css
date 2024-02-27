@@ -1,0 +1,29 @@
+.card {
+  width: 100%;
+  position: relative;
+  border: solid 1px tomato;
+}
+
+.sneaker_tile {
+  display: block;
+  font-family: "Anton", sans-serif;
+}
+
+.sneaker_short_title {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+}
+
+figure {
+  width: 100%;
+  border: 1px dashed #ff6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  filter: var(--image-shadow);
+  transform: rotateX('24deg');
+  transform: rotate(-15deg);
+}
