@@ -6,7 +6,7 @@ jobs:
   deploy-front:
     runs-on: ubuntu-latest
     environment:
-      name: shoes
+      name: shoe_haven
     steps:
       - uses: actions/checkout@v4
       # Criação do build
