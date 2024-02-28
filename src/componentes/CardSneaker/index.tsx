@@ -13,13 +13,17 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
 
   return (
     <div className="card">
-      <h1 className="sneaker_tile">{ title }</h1>
-      <h2 className="sneaker_short_title">{ shortTitile }</h2>
-      <p>{ manufacturer}</p>
-      <figure>
+      <div className="sneaker_big_title_module">
+        <h2 className="sneaker_short_title">{ shortTitile }</h2>
+        <p>{ manufacturer}</p>
+      </div>
+      <figure className="sneaker_img_module">
         <img src={ image } alt="" />
       </figure>
-      <p className="sneaker_price">{price}</p>
+      <div className="sneaker_info_module">
+        <h1 className="sneaker_tile">{ title }</h1>
+        <p className="sneaker_price">{price}</p>
+      </div>
     </div>
   );
 }

@@ -14,13 +14,14 @@
   font-size: 40px;
 }
 
-figure {
+.sneaker_img_module {
   width: 100%;
   height: 50vh;
   border: 1px dashed #ff6347;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .slick-slide img {
@@ -29,8 +30,14 @@ figure {
   transition: transform 2s ease;
 }
 
+.sneaker_img_module img {
+  filter: var(--image-shadow);
+  transform: rotate(-10deg) scale(0.7) translate(10px, 50px);
+  transition: transform 2s ease;
+}
+
 
 .slick-slide.slick-active.slick-current img{
-  transform: rotate(-0deg) scale(1);
+  transform: rotate(-0deg) scale(1) translate(10px, 50px);;
   transition: transform 2s ease;
 }

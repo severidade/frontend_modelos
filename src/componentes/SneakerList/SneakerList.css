@@ -1,14 +1,16 @@
 .container_card {
   width: 100vw;
   max-width: 100%;
+  border: solid 2px var(--color-title);
+  padding-bottom: 70px;
 }
 
-.slick-prev, .slick-next {
+/* .slick-prev, button.slick-arrow.slick-next {
   width: 50px;
   height: 50px;
   z-index: 3;
   text-align: center;
-}
+} */
 
 .slick-prev {
   left: var(--default-gap);
@@ -16,4 +18,36 @@
 
 .slick-next {
   right: var(--default-gap);
+}
+
+
+button.slick-arrow.slick-next, 
+button.slick-arrow.slick-prev {
+  width: 50px;
+  height: 50px;
+  top: inherit !important;
+  left: inherit !important;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
+  border: solid 1px var(--color-text);
+  text-indent: -100px;
+  overflow: hidden;
+}
+
+button.slick-arrow.slick-next {
+  transform: translate(-20px, 60px) !important;
+  background: url(../../assets/ceta_direita.svg);
+  background-repeat: no-repeat;
+  background-position: 19px center;
+  background-size: 25%;
+}
+
+button.slick-arrow.slick-prev {
+  transform: translate(-80px, 60px) !important;
+  background: url(../../assets/ceta_esquerda.svg);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 25%;
 }
