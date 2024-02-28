@@ -4,15 +4,38 @@
   border: solid 1px tomato;
 }
 
-.sneaker_tile {
-  display: block;
-  font-family: "Anton", sans-serif;
+.sneaker_big_title_module {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: tan; */
+  padding: 10px;
 }
 
 .sneaker_short_title {
   font-family: "Anton", sans-serif;
-  font-size: 40px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
 }
+
+.sneaker_manufacturer {
+  font-size: 35vw;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #7fffd400;
+  -webkit-text-stroke: 1.5px var(--color-text);
+  /* mix-blend-mode: color-burn; */
+}
+
+
+  
 
 .sneaker_img_module {
   width: 100%;
@@ -26,7 +49,7 @@
 
 .slick-slide img {
   filter: var(--image-shadow);
-  transform: rotate(-10deg) scale(0.7);
+  /* transform: rotate(-10deg) scale(0.7); */
   transition: transform 2s ease;
 }
 
@@ -36,8 +59,13 @@
   transition: transform 2s ease;
 }
 
-
 .slick-slide.slick-active.slick-current img{
   transform: rotate(-0deg) scale(1) translate(10px, 50px);;
   transition: transform 2s ease;
+}
+
+
+.sneaker_tile {
+  display: block;
+  font-family: "Anton", sans-serif;
 }

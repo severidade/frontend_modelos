@@ -42,7 +42,7 @@ const SneakerList: SneakerType[] = [
   },
   {
     id: 5,
-    manufacturer: 'Nike',
+    manufacturer: 'adidas',
     title: 'TÊNIS ADIDAS SAMBA OG UNISSEX',
     shortTitile: 'SAMBA',
     image: tenis05,

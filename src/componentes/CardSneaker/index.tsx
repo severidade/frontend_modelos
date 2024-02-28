@@ -15,7 +15,7 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
     <div className="card">
       <div className="sneaker_big_title_module">
         <h2 className="sneaker_short_title">{ shortTitile }</h2>
-        <p>{ manufacturer}</p>
+        <p className="sneaker_manufacturer">{ manufacturer }</p>
       </div>
       <figure className="sneaker_img_module">
         <img src={ image } alt="" />
