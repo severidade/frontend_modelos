@@ -1,19 +1,20 @@
 .card {
   width: 100%;
   position: relative;
-  border: solid 1px tomato;
+  /* border: solid 1px tomato; */
+  overflow: hidden;
 }
+
+/* CONTAINER TITULO GRANDE */
 
 .sneaker_big_title_module {
   position: absolute;
   width: 100%;
-  height: 70%;
-  /* background-color: tomato; */
+  height: 65%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* background-color: tan; */
-  padding: 10px;
+  padding: 0 var(--default-gap);
 }
 
 .sneaker_short_title {
@@ -24,27 +25,23 @@
 }
 
 .sneaker_manufacturer {
-  font-size: 35vw;
+  font-size: 32vw;
   font-family: "Anton", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
   color: #7fffd400;
   -webkit-text-stroke: 1.5px var(--color-text);
-  /* mix-blend-mode: color-burn; */
 }
-
-
   
-
+/* CONTAINER IMAGEM PRODUTO */
 .sneaker_img_module {
   width: 100%;
-  height: 50vh;
-  border: 1px dashed #ff6347;
+  height: 40vh;
+  /* border: 1px dashed #ff6347; */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .slick-slide img {
@@ -55,17 +52,43 @@
 
 .sneaker_img_module img {
   filter: var(--image-shadow);
-  transform: rotate(-10deg) scale(0.7) translate(10px, 50px);
+  transform: rotate(-10deg) scale(0.7) translate(10px, 40px);
   transition: transform 2s ease;
 }
 
 .slick-slide.slick-active.slick-current img{
-  transform: rotate(-0deg) scale(1) translate(10px, 50px);;
+  transform: rotate(-0deg) scale(1) translate(10px, 40px);;
   transition: transform 2s ease;
 }
 
+/* Preço dos tênis */
+.sneaker_info_module {
+  padding: 0 var(--default-gap);
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  /* gap: calc(var(--default-gap) * 1/3); */
+  /* background-color: tomato; */
+}
 
 .sneaker_tile {
   display: block;
-  font-family: "Anton", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.sneaker_price {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  position: relative;
+  line-height: 1;
+  /* left: 20px; */
+}
+
+.sneaker_price::before {
+  content: "R$ ";
+  font-family: "Chathura", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
 }

@@ -1,16 +1,10 @@
 .container_card {
   width: 100vw;
   max-width: 100%;
-  border: solid 2px var(--color-title);
+  /* border: solid 2px var(--color-title); */
   padding-bottom: 70px;
+  margin-bottom: 20px;
 }
-
-/* .slick-prev, button.slick-arrow.slick-next {
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  text-align: center;
-} */
 
 .slick-prev {
   left: var(--default-gap);
@@ -19,7 +13,6 @@
 .slick-next {
   right: var(--default-gap);
 }
-
 
 button.slick-arrow.slick-next, 
 button.slick-arrow.slick-prev {

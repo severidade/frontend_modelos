@@ -43,7 +43,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: calc(var(--default-gap) * 2 );
+  gap: var(--default-gap);
   display: flex;
   justify-content: center;
   align-items: center;

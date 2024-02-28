@@ -11,7 +11,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 1,
     manufacturer: 'Nike',
-    title: 'TÊNIS NIKE DUNK LOW MASCULINO',
+    title: 'Tênis Nike Dunk Low Masculino',
     shortTitile: 'DUNK LOW',
     image: tenis01,
     price: 849.99,
@@ -19,7 +19,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 2,
     manufacturer: 'Nike',
-    title: 'TÊNIS ADIDAS SAMBA OG',
+    title: 'Tênis Adidas Samba OG',
     shortTitile: 'SAMBA',
     image: tenis02,
     price: 699.99,
@@ -27,7 +27,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 3,
     manufacturer: 'Vans',
-    title: 'TÊNIS VANS ULTRARANGE',
+    title: 'Tênis Vans Ultrarange',
     shortTitile: 'ULTRARANGE',
     image: tenis03,
     price: 359.99,
@@ -35,7 +35,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 4,
     manufacturer: 'Nike',
-    title: "TÊNIS NIKE AIR FORCE 1'07 NCPS MASCULINO",
+    title: "Tênis Nike Air Force 1'07 NCPS Masculino",
     shortTitile: 'AIR FORCE',
     image: tenis04,
     price: 799.99,
@@ -43,7 +43,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 5,
     manufacturer: 'adidas',
-    title: 'TÊNIS ADIDAS SAMBA OG UNISSEX',
+    title: 'Tênis Adidas samba Og Unissex',
     shortTitile: 'SAMBA',
     image: tenis05,
     price: 699.99,
@@ -51,7 +51,7 @@ const SneakerList: SneakerType[] = [
   {
     id: 6,
     manufacturer: 'Nike',
-    title: 'TÊNIS NIKE DUNK HI RETRÔ SE MASCULINO',
+    title: 'Tênis Nike Dunk Hi Retrô Masculino',
     shortTitile: 'DUNK HI',
     image: tenis06,
     price: 749.99,
