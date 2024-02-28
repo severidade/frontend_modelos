@@ -5,4 +5,8 @@ export type SneakerType = {
   shortTitile: string,
   image?: string,
   price: number,
+  promotion?: {
+    off: number,
+    isPromotional: boolean,
+  }
 };

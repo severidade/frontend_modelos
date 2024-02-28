@@ -15,6 +15,10 @@ const SneakerList: SneakerType[] = [
     shortTitile: 'DUNK LOW',
     image: tenis01,
     price: 849.99,
+    promotion: {
+      off: 15,
+      isPromotional: true,
+    },
   },
   {
     id: 2,
@@ -39,6 +43,10 @@ const SneakerList: SneakerType[] = [
     shortTitile: 'AIR FORCE',
     image: tenis04,
     price: 799.99,
+    promotion: {
+      off: 10,
+      isPromotional: true,
+    },
   },
   {
     id: 5,

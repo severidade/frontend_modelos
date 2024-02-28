@@ -9,10 +9,21 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
     shortTitile,
     image,
     price,
+    promotion,
   } = sneakerItem;
+
+  const isPromotional = promotion?.isPromotional;
+  const off = promotion?.off;
 
   return (
     <div className="card">
+      { isPromotional && (
+        <div className="label_promotional">
+          { off }
+          %
+          <strong>off</strong>
+        </div>
+      )}
       <div className="sneaker_big_title_module">
         <h2 className="sneaker_short_title">{ shortTitile }</h2>
         <p className="sneaker_manufacturer">{ manufacturer }</p>
@@ -22,7 +33,9 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
       </figure>
       <div className="sneaker_info_module">
         <h1 className="sneaker_tile">{ title }</h1>
-        <p className="sneaker_price">{price}</p>
+        <p className="sneaker_price">
+          {price}
+        </p>
       </div>
     </div>
   );
