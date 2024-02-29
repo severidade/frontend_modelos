@@ -39,13 +39,12 @@ body {
 
 .main {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: var(--default-gap);
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }

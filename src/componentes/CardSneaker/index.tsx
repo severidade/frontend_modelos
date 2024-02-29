@@ -19,7 +19,7 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
   const [promotionalPrice, setPromotionalPrice] = useState<number | null>(null);
 
   if (isPromotional && off && !promotionalPrice) {
-    const discountedPrice = price - (price * off) / 100;
+    const discountedPrice = (price - (price * off) / 100);
     setPromotionalPrice(discountedPrice);
   }
 
