@@ -44,7 +44,7 @@ const SneakerList: SneakerType[] = [
     image: tenis04,
     price: 799.99,
     promotion: {
-      off: 10,
+      off: 20,
       isPromotional: true,
     },
   },
@@ -55,6 +55,10 @@ const SneakerList: SneakerType[] = [
     shortTitile: 'SAMBA',
     image: tenis05,
     price: 699.99,
+    promotion: {
+      off: 10,
+      isPromotional: true,
+    },
   },
   {
     id: 6,

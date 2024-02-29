@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SneakerType } from '../../types/SneakerType';
 
 import './CardSneaker.css';
@@ -14,6 +15,13 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
 
   const isPromotional = promotion?.isPromotional;
   const off = promotion?.off;
+
+  const [promotionalPrice, setPromotionalPrice] = useState<number | null>(null);
+
+  if (isPromotional && off && !promotionalPrice) {
+    const discountedPrice = price - (price * off) / 100;
+    setPromotionalPrice(discountedPrice);
+  }
 
   return (
     <div className="card">
@@ -34,7 +42,15 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
       <div className="sneaker_info_module">
         <h1 className="sneaker_tile">{ title }</h1>
         <p className="sneaker_price">
-          {price}
+          {isPromotional && promotionalPrice ? (
+            <>
+              {promotionalPrice.toFixed(2)}
+              {' '}
+              <span>{price}</span>
+            </>
+          ) : (
+            `${price}`
+          )}
         </p>
       </div>
     </div>
