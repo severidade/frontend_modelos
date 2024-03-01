@@ -1,9 +1,6 @@
 footer {
   width: 100%;
-  color: white;
-  z-index: 1;
 }
-
 
 footer p {
   text-align: center;
@@ -46,11 +43,6 @@ footer p {
 .social_github {
   background-image: url("./icons/github.png");
 }
-
-/* a.social_codpen {
-  background-image: url("http://severidade.com.br/codpenio/smile_slider/codpen.svg");
-  background-size: 90%;
-} */
 
 .social_behance {
   background-image: url("./icons/behance.png");
