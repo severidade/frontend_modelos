@@ -161,6 +161,6 @@
   }
 
   button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
-    right: 15vw;
+    right: 15vw !important;
   }
 }
