@@ -3,7 +3,7 @@
 ![Prévia da página - Preview of the page](./carrosel.png)
 Este projeto foi desenvolvido para simular o elemento hero em forma de carrossel, para uma loja virtual de tênis. Este componente permite exibir uma seleção de tênis em destaque.
 
-###Funcionalidades
+### Funcionalidades
 - Detalhes do Produto: Veja informações detalhadas sobre cada tênis, incluindo fabricante, título, preço e promoções.
 - Experiência Responsiva: A interface do usuário é projetada para funcionar perfeitamente em dispositivos móveis e desktops.
 - Responsividade: O carrossel é projetado para ser totalmente responsivo, garantindo uma experiência consistente em dispositivos móveis, tablets e desktops.
@@ -11,7 +11,7 @@ Este projeto foi desenvolvido para simular o elemento hero em forma de carrossel
 - Orientação do Dispositivo: O OrientationDetectorDevice assegura que o carrossel seja exibido da melhor forma possível pois indica o usuário que é preciso girar a tela para visualizar o conteúdo
 
 
-###Tecnologias Utilizadas
+### Tecnologias Utilizadas
 - React.js: Utilizado para a construção do componente carrossel e manipulação da interface do usuário.
 - TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript, proporcionando maior segurança e prevenindo erros durante o desenvolvimento.
 - Vite: Um construtor de aplicações web que oferece uma experiência de desenvolvimento extremamente rápida e eficiente para projetos modernos em JavaScript, TypeScript, CSS e HTML.
