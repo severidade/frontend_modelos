@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SneakerType } from '../../types/SneakerType';
 
 import './CardSneaker.css';
@@ -18,10 +18,12 @@ function CardSneaker({ sneakerItem }: { sneakerItem: SneakerType }) {
 
   const [promotionalPrice, setPromotionalPrice] = useState<number | null>(null);
 
-  if (isPromotional && off && !promotionalPrice) {
-    const discountedPrice = (price - (price * off) / 100);
-    setPromotionalPrice(discountedPrice);
-  }
+  useEffect(() => {
+    if (isPromotional && off && !promotionalPrice) {
+      const discountedPrice = price - (price * off) / 100;
+      setPromotionalPrice(discountedPrice);
+    }
+  }, [isPromotional, off, price, promotionalPrice]);
 
   return (
     <div className="card">
