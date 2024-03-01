@@ -88,7 +88,8 @@
 
 .sneaker_price > span {
   font-weight: 300;
-  /* font-size: 20px; */
+  /* font-size: 20px;
+   */
   text-decoration: line-through;
 }
 .sneaker_price::before {
@@ -133,13 +134,11 @@
     margin: auto !important;
   }
 
-
   .sneaker_big_title_module {
     width: max-content;
     padding: 0;
     justify-content: flex-start;
     position: initial;
-    /* background-color: var(--color-title); */
   }
 
   .sneaker_img_module {
@@ -156,11 +155,12 @@
   .sneaker_manufacturer{
     font-size: 50vh;
   }
-  /* .sneaker_short_title {
-    padding-left: 20px;
-  } */
   
   .sneaker_img_module{
     height: 50vh;
+  }
+
+  button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
+    right: 15vw;
   }
 }
