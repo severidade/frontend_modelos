@@ -4,6 +4,7 @@ import Sneakers from './data/SneakersData';
 
 import SneakerList from './componentes/SneakerList';
 import Header from './componentes/Header';
+import OrientationDetectorDevice from './componentes/OrientationDetectorDevice';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <SneakerList sneakers={ Sneakers } />
       <Footer />
+      <OrientationDetectorDevice />
     </div>
   );
 }
