@@ -6,7 +6,7 @@ function Footer() {
       <p>
         <strong className={ styles.titulo }> Tecnologias</strong>
         {' '}
-        React - Javascript - HTML - CSS
+        React - Javascript - TypeScript - HTML - CSS - Slick Carousel - ESLint
         {' '}
       </p>
       <p>Este projeto foi desenvolvido por Marco Severo.</p>
