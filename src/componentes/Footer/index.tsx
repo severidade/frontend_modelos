@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import styles from './footer.module.css';
 
 function Footer() {
@@ -6,7 +7,7 @@ function Footer() {
       <p>
         <strong className={ styles.titulo }> Tecnologias</strong>
         {' '}
-        React - Javascript - TypeScript - HTML - CSS - Slick Carousel - ESLint
+        React - Javascript - TypeScript - HTML - CSS - Slick Carousel - Framer Motion - ESLint
         {' '}
       </p>
       <p>Este projeto foi desenvolvido por Marco Severo.</p>
