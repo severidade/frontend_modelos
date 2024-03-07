@@ -39,40 +39,24 @@ function CardSneaker(
         </div>
       )}
 
-      {/* { isPromotional && isActive && (
-        <motion.div
-          className="label_promotional"
-          initial={ { scale: 0.7, rotate: 15 } }
-          animate={ { scale: [1, 1.1, 1] } }
-          transition={ { duration: 2, repeat: Infinity } }
-        >
-          { off }
-          %
-          <strong>off</strong>
-        </motion.div>
-      )} */}
-
       <div className="sneaker_big_title_module">
         <h2 className="sneaker_short_title">{ shortTitile }</h2>
         <p className="sneaker_manufacturer">{ manufacturer }</p>
       </div>
-      {isActive && (
-        <motion.figure
-          className="sneaker_img_module"
-          initial={ { rotate: -10, scale: 0.7, x: 10, y: 40 } }
-          animate={ { rotate: 0, scale: 1, x: 10, y: 40 } }
-          transition={ { duration: 1, ease: 'easeInOut' } }
-          whileHover={ { scale: 1.3 } }
-        >
+      <figure
+        className="sneaker_img_module"
+      >
+        {isActive && (
           <motion.img
             src={ image }
             alt=""
-            initial={ { opacity: 0 } }
-            animate={ { opacity: 1 } }
-            transition={ { delay: 0.0, duration: 0.3 } }
+            initial={ { opacity: 0, rotate: -10, scale: 0.7, x: 10, y: 40 } }
+            animate={ { opacity: 1, rotate: 0, scale: 1, x: 10, y: 40 } }
+            whileHover={ { scale: 1.3 } }
+            transition={ { duration: 0.3, ease: 'easeInOut' } }
           />
-        </motion.figure>
-      )}
+        )}
+      </figure>
       <div className="sneaker_info_module">
         <h1 className="sneaker_tile">{ title }</h1>
         <p className="sneaker_price">
