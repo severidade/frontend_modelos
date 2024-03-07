@@ -53,6 +53,7 @@ function CardSneaker(
             initial={ { opacity: 0, rotate: -10, scale: 0.7, x: 10, y: 40 } }
             animate={ { opacity: 1, rotate: 0, scale: 1, x: 10, y: 40 } }
             whileHover={ { scale: 1.3 } }
+            whileTap={ { scale: 0.9 } } // Adicionando a animação de "bounce" aqui
             transition={ { duration: 0.3, ease: 'easeInOut' } }
           />
         )}
