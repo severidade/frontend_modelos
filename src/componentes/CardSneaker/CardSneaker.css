@@ -50,7 +50,7 @@
   transition: transform 2s ease;
 }
 
-.sneaker_img_module img {
+/* .sneaker_img_module img {
   filter: var(--image-shadow);
   transform: rotate(-10deg) scale(0.7) translate(10px, 40px);
   transition: transform 2s ease;
@@ -59,7 +59,7 @@
 .slick-slide.slick-active.slick-current img{
   transform: rotate(-0deg) scale(1) translate(10px, 40px);;
   transition: transform 2s ease;
-}
+} */
 
 /* Preço dos tênis */
 .sneaker_info_module {
