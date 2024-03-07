@@ -3,6 +3,7 @@
   position: relative;
   /* border: solid 1px tomato; */
   overflow: hidden;
+  height: 40vh;
 }
 
 /* CONTAINER TITULO GRANDE */

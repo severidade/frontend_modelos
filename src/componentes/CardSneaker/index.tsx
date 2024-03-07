@@ -38,6 +38,20 @@ function CardSneaker(
           <strong>off</strong>
         </div>
       )}
+
+      {/* { isPromotional && isActive && (
+        <motion.div
+          className="label_promotional"
+          initial={ { scale: 0.7, rotate: 15 } }
+          animate={ { scale: [1, 1.1, 1] } }
+          transition={ { duration: 2, repeat: Infinity } }
+        >
+          { off }
+          %
+          <strong>off</strong>
+        </motion.div>
+      )} */}
+
       <div className="sneaker_big_title_module">
         <h2 className="sneaker_short_title">{ shortTitile }</h2>
         <p className="sneaker_manufacturer">{ manufacturer }</p>
