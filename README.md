@@ -10,10 +10,21 @@ Este projeto foi desenvolvido para simular o elemento hero em forma de carrossel
 - Promoções Dinâmicas: Quando aplicável, as promoções são calculadas dinamicamente dentro do próprio componente, garantindo uma apresentação atualizada e precisa dos preços dos tênis em promoção.
 - Orientação do Dispositivo: O OrientationDetectorDevice assegura que o carrossel seja exibido da melhor forma possível pois indica o usuário que é preciso girar a tela para visualizar o conteúdo
 
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="width: 50%;">
+      O componente OrientationDetectorDevice Detecta o dispositivo móvel e sua orientação. Se estiver na horizontal, exibe uma mensagem recomendando a melhor visualização na orientação vertical.
+    </td>
+    <td style="width: 50%;">
+      <img src="./mobile_02.png" alt="Descrição da Imagem 1" style="width: 100%;">
+    </td>
+  </tr>
+</table>
+
 
 ### Tecnologias Utilizadas
 - React.js: Utilizado para a construção do componente carrossel e manipulação da interface do usuário.
-- TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript, proporcionando maior segurança e prevenindo erros durante o desenvolvimento.
+- TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript, proporcionando maior segurança e prevenindo erros durante o desenvolvimento.co
 - Vite: Um construtor de aplicações web que oferece uma experiência de desenvolvimento extremamente rápida e eficiente para projetos modernos em JavaScript, TypeScript, CSS e HTML.
 - CSS Modules: Uma abordagem para escrever estilos CSS em arquivos modulares, garantindo o encapsulamento e a reutilização de estilos específicos de componentes.
 - CSS3: Responsável pelo estilo e layout do carrossel, juntamente com o uso de CSS Modules, garantindo uma apresentação visualmente atraente e coesa.
