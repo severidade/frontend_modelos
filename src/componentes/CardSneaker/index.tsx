@@ -21,6 +21,7 @@ function CardSneaker(
   const off = promotion?.off;
 
   const [promotionalPrice, setPromotionalPrice] = useState<number | null>(null);
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     if (isPromotional && off && !promotionalPrice) {
@@ -28,6 +29,14 @@ function CardSneaker(
       setPromotionalPrice(discountedPrice);
     }
   }, [isPromotional, off, price, promotionalPrice]);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = image ?? '';
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+  }, [image]);
 
   return (
     <div className="card">
@@ -43,10 +52,8 @@ function CardSneaker(
         <h2 className="sneaker_short_title">{ shortTitile }</h2>
         <p className="sneaker_manufacturer">{ manufacturer }</p>
       </div>
-      <figure
-        className="sneaker_img_module"
-      >
-        {isActive && (
+      <figure className="sneaker_img_module">
+        {imageLoaded && isActive && (
           <motion.img
             src={ image }
             alt=""
