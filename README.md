@@ -12,7 +12,7 @@ Este projeto foi desenvolvido para simular o elemento hero em forma de carrossel
 
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
-    <td style="width: 50%;">
+    <td style="width: 50% !important;">
       O componente OrientationDetectorDevice Detecta o dispositivo móvel e sua orientação. Se estiver na horizontal, exibe uma mensagem recomendando a melhor visualização na orientação vertical.
     </td>
     <td style="width: 50%;">
