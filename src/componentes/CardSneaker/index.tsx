@@ -56,7 +56,7 @@ function CardSneaker(
         {imageLoaded && isActive && (
           <motion.img
             src={ image }
-            alt=""
+            alt={ `Imagem de ${title}` }
             initial={ { rotate: -10, scale: 0.7, x: 10, y: 40 } }
             animate={ { rotate: 0, scale: 1, x: 10, y: 40 } }
             whileHover={ { scale: 1.3 } }
