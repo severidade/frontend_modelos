@@ -51,8 +51,9 @@ footer p {
 
 .external_link {
   color: var(--color-cta);
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 500px) {
