@@ -35,15 +35,27 @@
 
     ```bash
     npm i @trybe/eslint-config-frontend -D
+
+    npx install-peerdeps --dev eslint-config-airbnb
     ```
 
 - [ ] Criar o arquivo ``.eslintrc.json`` na raiz do projeto com o seguinte conteúdo.
 
     ```bash
-    //.eslintrc.json
     {
-      "extends": "@trybe/eslint-config-frontend/typescript"
+    "extends": ["airbnb", "airbnb/hooks", "plugin:@typescript-eslint/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
     }
+    }
+
     ```
 
 - [ ] Editar o arquivo ``pakage.json`` adicionando o script para rodar o ESlint.
