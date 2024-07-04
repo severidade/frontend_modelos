@@ -31,11 +31,9 @@
     ```bash
     npm remove @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks eslint-plugin-react-refresh
     ```
-- [ ] instalar o pacote de regras de lint com o padrão da Trybe.
+- [ ] instalar o pacote de regras de lint com o padrão do Airbnb.
 
     ```bash
-    npm i @trybe/eslint-config-frontend -D
-
     npx install-peerdeps --dev eslint-config-airbnb
     ```
 
@@ -76,12 +74,18 @@
     ```bash
     //.vscode/settings.json
     {
-      "editor.formatOnSave": true,
-      "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true,
-  },
-      "extensions.ignoreRecommendations": false,
-  }
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "extensions.ignoreRecommendations": false,
+    }
     ```
+
+- [ ] Rodar o Lint
+
+```bash
+npm run lit
+```
 </details>
