@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&display=swap');
+
+/* 
+font-family: 'Kalnia', serif;
+font-family: 'Lato', sans-serif; 
+font-family: "Work Sans", sans-serif;
+font-family: "Titillium Web", sans-serif;
+font-family: "Chathura", sans-serif;
+font-family: "Anton", sans-serif;
+*/
+
+:root {
+  --color-text: #ffffff;
+  --color-transparente: #ffffff00;
+  --color-title: #f7c130;
+  --color-cta: #ff6347;
+  --color-dark: #030c1a;
+  --default-radius: 5px;
+  --default-gap: 20px;
+  --mobile-width: 90vw;
+  --desktop-width: 50vw;
+  --image-shadow: drop-shadow(16px 16px 14px #000000);
+
+  width: 100vw;
+  max-width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+body {
+  font-family: "Titillium Web", sans-serif;
+  color: var(--color-text);
+  background: url("./assets/black_texture.png") repeat;
+  font-weight: 300;
+  font-size: 18px;
 }
