@@ -1,10 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 import data from './data/index.ts';
 import './App.css';
+import Footer from './components/Footer/index.tsx';
 
 function App() {
   return (
-    <>
+    <div className="main">
       {data.map((category) => (
         <div key={category.id}>
           <h2>{category.name}</h2>
@@ -31,7 +32,8 @@ function App() {
           </ul>
         </div>
       ))}
-    </>
+      <Footer />
+    </div>
   );
 }
 
