@@ -13,7 +13,7 @@ const categories = [
         id: 3, title: 'My Neighbor Totoro', released: 1988, embedId: '92a7Hj0ijLs',
       },
       {
-        id: 5, title: 'The Iron Giant', released: 1999, embedId: 'obLtyj8hfFk',
+        id: 4, title: 'The Iron Giant', released: 1999, embedId: 'obLtyj8hfFk',
       },
     ],
   },
@@ -22,10 +22,10 @@ const categories = [
     name: 'Action',
     movies: [
       {
-        id: 1, title: 'Mad Max: Fury Road', released: 2015, embedId: 'hEJnMQG9ev8',
+        id: 5, title: 'Mad Max: Fury Road', released: 2015, embedId: 'hEJnMQG9ev8',
       },
       {
-        id: 2, title: 'John Wick', released: 2014, embedId: 'gZtmzT9Wgrw',
+        id: 6, title: 'John Wick', released: 2014, embedId: 'gZtmzT9Wgrw',
       },
     ],
   },
@@ -34,10 +34,10 @@ const categories = [
     name: 'Drama',
     movies: [
       {
-        id: 1, title: 'Forrest Gump', released: 1994, embedId: 'vDY_uZAaU7g',
+        id: 7, title: 'Forrest Gump', released: 1994, embedId: 'vDY_uZAaU7g',
       },
       {
-        id: 2, title: "Schindler's List", released: 1993, embedId: 'mxphAlJID9U',
+        id: 8, title: "Schindler's List", released: 1993, embedId: 'mxphAlJID9U',
       },
     ],
   },
@@ -46,15 +46,14 @@ const categories = [
     name: 'Sci-fi',
     movies: [
       {
-        id: 1, title: 'Star Wars: Episode IV - A New Hope', released: 1977, embedId: 'MpkrMqmmy5k',
+        id: 9, title: 'Star Wars: Episode IV - A New Hope', released: 1977, embedId: 'MpkrMqmmy5k',
       },
       {
-        id: 3, title: 'Avatar: The Way of Water', released: 2023, embedId: 'd9MyW72ELq0 ',
+        id: 10, title: 'Avatar: The Way of Water', released: 2023, embedId: 'd9MyW72ELq0',
       },
       {
-        id: 3, title: 'Flash Gordon', released: 1980, embedId: 'O6uOHnxf85g',
+        id: 11, title: 'Flash Gordon', released: 1980, embedId: 'O6uOHnxf85g',
       },
-
     ],
   },
 ];
