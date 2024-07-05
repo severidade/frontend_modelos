@@ -59,11 +59,20 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--default-gap);
-  display: flex;
   position: relative;
+}
+
+.app_title {
+  font-family: Kalnia, serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--color-title);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .movie_list {
@@ -83,4 +92,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 4vw;
+}
+
+.player{
+  border: solid violet;
+  display: flex;
+  flex-direction: column;
 }
