@@ -75,3 +75,12 @@ body {
   background-color: #007BFF;
   color: white;
 }
+
+.contentWrapper {
+  border: solid 1px tomato;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+}

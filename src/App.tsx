@@ -12,12 +12,14 @@ function App() {
 
   return (
     <div className="main">
-      <Sidebar
-        data={data}
-        selectedMovie={selectedMovie}
-        setSelectedMovie={setSelectedMovie}
-      />
-      <Player selectedMovie={selectedMovie} />
+      <div className="contentWrapper">
+        <Sidebar
+          data={data}
+          selectedMovie={selectedMovie}
+          setSelectedMovie={setSelectedMovie}
+        />
+        <Player selectedMovie={selectedMovie} />
+      </div>
       <Footer />
     </div>
   );
