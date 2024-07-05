@@ -3,11 +3,13 @@ import { useState } from 'react';
 import data from './data/index.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
+import Player from './components/Player/index.tsx';
 
 function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
   const [selectedMovie, setSelectedMovie] = useState(data[0].movies[0]);
 
+  console.log(selectedMovie);
   return (
     <div className="main">
       <div className="sidebar">
@@ -32,27 +34,7 @@ function App() {
           ))}
         </div>
       </div>
-      <div className="player">
-        {selectedMovie && (
-          <div>
-            <h2>
-              {selectedMovie.title}
-              {' '}
-              (
-              {selectedMovie.released}
-              )
-            </h2>
-            <iframe
-              title={selectedMovie.title}
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${selectedMovie.embedId}`}
-              frameBorder="0"
-              allowFullScreen
-            />
-          </div>
-        )}
-      </div>
+      <Player selectedMovie={selectedMovie} />
       <Footer />
     </div>
   );
