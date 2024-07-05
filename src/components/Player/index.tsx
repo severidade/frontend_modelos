@@ -9,7 +9,7 @@ function Player({ selectedMovie }: PlayerProps) {
   return (
     <div className="player">
       {selectedMovie && (
-        <div>
+        <>
           <h2>
             {selectedMovie.title}
             {' '}
@@ -25,7 +25,8 @@ function Player({ selectedMovie }: PlayerProps) {
             frameBorder="0"
             allowFullScreen
           />
-        </div>
+          <button type="button">adicionar ao favorito</button>
+        </>
       )}
     </div>
   );

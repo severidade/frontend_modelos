@@ -12,7 +12,6 @@ type SidebarProps = {
 function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
   return (
     <div className="sidebar">
-      <h2>Lista de filmes por categoria</h2>
       <div>
         {data.map((category) => (
           <div key={category.id}>
