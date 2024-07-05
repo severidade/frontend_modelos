@@ -1,9 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { Movie } from '../../types/movie.ts';
+import { Data } from '../../types/data.ts';
 
 type SidebarProps = {
-  data: { id: number; name: string; movies: Movie[] }[]; // Tipo para o array de categorias
+  data: Data[]; // Tipo para o array de categorias
   selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
 };
