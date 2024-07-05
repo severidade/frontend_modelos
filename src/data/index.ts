@@ -1,6 +1,24 @@
 const categories = [
   {
     id: 1,
+    name: 'Animation',
+    movies: [
+      {
+        id: 1, title: 'Luca', released: 2021, embedId: 'stXs0Sf0f8A',
+      },
+      {
+        id: 2, title: 'Spirited Away', released: 2001, embedId: 'ByXuk9QqQkk',
+      },
+      {
+        id: 3, title: 'My Neighbor Totoro', released: 1988, embedId: '92a7Hj0ijLs',
+      },
+      {
+        id: 5, title: 'The Iron Giant', released: 1999, embedId: 'obLtyj8hfFk',
+      },
+    ],
+  },
+  {
+    id: 2,
     name: 'Action',
     movies: [
       {
@@ -12,7 +30,7 @@ const categories = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Drama',
     movies: [
       {
@@ -24,7 +42,7 @@ const categories = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Sci-fi',
     movies: [
       {
@@ -33,6 +51,10 @@ const categories = [
       {
         id: 3, title: 'Avatar: The Way of Water', released: 2023, embedId: 'd9MyW72ELq0 ',
       },
+      {
+        id: 3, title: 'Flash Gordon', released: 1980, embedId: 'O6uOHnxf85g',
+      },
+
     ],
   },
 ];
