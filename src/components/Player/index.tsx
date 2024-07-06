@@ -25,7 +25,10 @@ function Player({ selectedMovie }: PlayerProps) {
             frameBorder="0"
             allowFullScreen
           />
-          <button type="button">adicionar ao favorito</button>
+          <button type="button">
+            favoritar
+            {/* {isFavorite ? 'remover do favoritos' : 'adicionar aos favoritos'} */}
+          </button>
         </>
       )}
     </div>

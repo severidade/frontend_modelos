@@ -10,7 +10,7 @@ function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
 
   const [selectedMovie, setSelectedMovie] = useState(data[0].movies[0]);
-  const [favoritList, setFavoritList] = useState([]);
+  // const [favoritList, setFavoritList] = useState([]);
 
   return (
     <div className="main">
