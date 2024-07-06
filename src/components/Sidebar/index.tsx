@@ -1,8 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
-
 import { useState, useEffect, useCallback } from 'react';
 import { Movie } from '../../types/movie.ts';
 import { Data } from '../../types/data.ts';
+
+import './sidebar.css';
 
 type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
@@ -45,11 +46,12 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
 
   return (
 
-    <div className="sidebar">
+    <div className="container_sidebar">
       {windowWidth <= MAX_WIDTH_MOBILE && (
         <button
           onClick={toggleMenu}
           type="button"
+          className="toggle_menu"
         >
           {menuOpen ? 'Fechar Menu' : 'Abrir Menu'}
         </button>
