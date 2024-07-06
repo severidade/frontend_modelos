@@ -26,10 +26,10 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
       const newWidth = window.innerWidth;
       setWindowWidth(newWidth);
 
+      setMenuOpen(false);
+
       // Se a largura da tela for maior que MAX_WIDTH_MOBILE, mantenha o menu aberto
       if (newWidth > MAX_WIDTH_MOBILE) {
-        setMenuOpen(true);
-      } else {
         setMenuOpen(false);
       }
     };
@@ -47,6 +47,8 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
   return (
 
     <div className="container_sidebar">
+
+      {/* botao desaparece em telas maiores que MAX_WIDTH_MOBILE */}
       {windowWidth <= MAX_WIDTH_MOBILE && (
         <button
           onClick={toggleMenu}
@@ -56,6 +58,7 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
           {menuOpen ? 'Fechar Menu' : 'Abrir Menu'}
         </button>
       )}
+
       <nav className={`menu ${menuOpen ? 'open' : ''}`}>
         {data.map((category) => (
           <div key={category.id}>
