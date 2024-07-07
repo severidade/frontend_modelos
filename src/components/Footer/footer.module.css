@@ -4,30 +4,30 @@ footer {
 
 footer p {
   text-align: center;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   padding: 0 5vw;
 }
 
 .titulo  {
   text-transform: uppercase;
-  margin-right: 10px;
-  font-size: 13px;
+  margin-right: 1rem;
+  font-size: 1.3rem;
 }
 
 .menu_social {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   flex-direction: row;
   justify-content: center;
-  padding: 20px 0;
+  padding: 2rem 0;
   list-style-type: none;
 }
 
 .social_linkedin, .social_github, .social_behance {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   overflow: hidden;
   text-indent: -1000%;
   background-size: 80%;
