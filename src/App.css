@@ -25,6 +25,8 @@ font-family: "Anton", sans-serif;
   --mobile-width: 90vw;
   --desktop-width: 50vw;
   --image-shadow: drop-shadow(16px 16px 14px #000000);
+  --sidebar-width-mobile: 70vw;
+  --sidebar-width-desktop: 20vw;
 
   width: 100vw;
   max-width: 100%;
@@ -106,4 +108,12 @@ iframe {
   border: solid violet;
   display: flex;
   flex-direction: column;
+  width: 100% !important;
+  height: 50vh !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contentWrapper {
+    padding: 0 calc(var(--sidebar-width-desktop) + var(--default-gap));
+  }
 }

@@ -1,8 +1,8 @@
 .container_sidebar {
   border: solid 1px var(--color-text);
   top: 0;
-  right: -50vw;
-  width: 50vw;
+  right: calc( var(--sidebar-width-mobile) * -1);
+  width: var(--sidebar-width-mobile);
   height: 100vh;
   position: fixed;
 }
@@ -46,6 +46,6 @@
 @media only screen and (min-width: 1024px) {
   .container_sidebar {
     right: 0;
-    width: 25vw;
+    width: var(--sidebar-width-desktop);
   }
 }
