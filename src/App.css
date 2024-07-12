@@ -1,32 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:wght@300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&display=swap');
 
 /* 
-font-family: 'Kalnia', serif;
-font-family: 'Lato', sans-serif; 
-font-family: "Work Sans", sans-serif;
-font-family: "Titillium Web", sans-serif;
-font-family: "Chathura", sans-serif;
 font-family: "Anton", sans-serif;
 */
 
 :root {
-  --color-text: #ffffff;
-  --color-transparente: #ffffff00;
-  --color-title: #f7c130;
-  --color-cta: #ff6347;
-  --color-dark: #030c1a;
+  --font-title-primary: 'Kalnia', serif;
+  --color-title-primary: #f7c130;
+  --color-text-primary: #ffffff;
   --nav: #bebebe;
+  --color-highlight: #ff6347;
+  --color-dark: #030c1a;
+  
   --default-radius: 5px;
   --default-gap: 20px;
-  --mobile-width: 90vw;
-  --desktop-width: 50vw;
-  --image-shadow: drop-shadow(16px 16px 14px #000000);
+
   --sidebar-width-mobile: 70vw;
   --sidebar-width-desktop: 20vw;
+
 
   width: 100vw;
   max-width: 100%;
@@ -54,7 +47,7 @@ h3 {
 
 body {
   background: url("./assets/black_texture.png") repeat;
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 .main {
@@ -74,10 +67,9 @@ iframe {
 }
 
 .app_title {
-  font-family: Kalnia, serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: var(--color-title);
+  font-family: var(--font-title-primary);
+  font-size: 5vw;
+  color: var(--color-title-primary);
   text-align: center;
   line-height: 1;
   margin-bottom: 20px;
@@ -110,6 +102,19 @@ iframe {
   flex-direction: column;
   width: 100% !important;
   height: 50vh !important;
+  position: relative;
+}
+
+.add_to_favorite{
+  background-color: var(--color-highlight);
+  position: absolute;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
