@@ -62,8 +62,8 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
       <nav className={`menu ${menuOpen ? 'open' : ''}`}>
         {data.map((category) => (
           <div key={category.id}>
-            <h3>{category.name}</h3>
-            <div className="movie_list">
+            <h3 className="film_category">{category.name}</h3>
+            <div className="film_list">
               {category.movies.map((movie) => (
                 <button
                   key={movie.id}
@@ -74,7 +74,7 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
                     }
                   }}
                   type="button"
-                  className={selectedMovie.title === movie.title ? 'selected-button' : ''}
+                  className={`film-item-button ${selectedMovie.title === movie.title ? 'selected' : ''} `}
                 >
                   {movie.title}
                 </button>
