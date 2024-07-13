@@ -5,6 +5,7 @@
   width: var(--sidebar-width-mobile);
   height: 100vh;
   position: fixed;
+  z-index: 999;
 }
 
 .toggle_menu {
@@ -25,7 +26,6 @@
   left: 0;
   transition: transform 0.5s ease-in;
   padding: calc(var(--default-gap) *2);
-  /* color: black !important; */
 }
 
 .menu::before{
@@ -50,7 +50,6 @@
   font-weight: 300;
   text-transform: uppercase;
 }
-
 
 .film_list {
   display: flex;
