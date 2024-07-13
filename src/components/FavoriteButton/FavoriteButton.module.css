@@ -1,0 +1,50 @@
+.favorite_button {
+  position: absolute;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-indent: -300%;
+  cursor: pointer;
+
+  background: url(./icons/like_icon.svg), url(./icons/Label_star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45%, 100%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.favorite_button:hover {
+  transform: scale(1.1) rotate(-15deg);
+}
+
+.favorite_button.is_favorite {
+  background: url(./icons/coracao.svg), url(./icons/Label_star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45%, 100%;
+}
+
+.favorite_button.is_favorite:active {
+  transform: scale(0.9);
+}
+
+@keyframes favorite-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.favorite_button.animate {
+  animation: favorite-animation 0.3s ease-in-out;
+}

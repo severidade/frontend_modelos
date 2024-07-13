@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { Movie } from '../../types/movie.ts';
+import FavoriteButton from '../FavoriteButton/index.tsx';
 
 type PlayerProps = {
   selectedMovie: Movie;
@@ -29,13 +30,11 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
             frameBorder="0"
             allowFullScreen
           />
-          <button
-            className={`favorite_button ${isFavorite ? 'is_favorite' : ''} `}
-            type="button"
-            onClick={() => toggleFavorite(selectedMovie.title)}
-          >
-            {isFavorite ? 'remover do favoritos' : 'adicionar aos favoritos'}
-          </button>
+          <FavoriteButton
+            title={selectedMovie.title}
+            isFavorite={isFavorite}
+            toggleFavorite={toggleFavorite}
+          />
         </>
       )}
     </div>

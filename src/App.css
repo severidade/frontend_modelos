@@ -87,22 +87,6 @@ iframe {
   position: relative;
 }
 
-.favorite_button {
-  background-color: var(--color-highlight);
-  position: absolute;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.favorite_button.is_favorite {
-  background-color: rgb(212, 71, 255);
-}
-
 @media only screen and (min-width: 1024px) {
   .contentWrapper {
     padding: 0 calc(var(--sidebar-width-desktop) + var(--default-gap));

@@ -22,10 +22,6 @@ function App() {
     });
   };
 
-  // useEffect(() => {
-  //   console.log('Lista de favoritos:', favoritList);
-  // }, [favoritList]);
-
   return (
     <div className="main">
       <h1 className="app_title">CineHits</h1>
