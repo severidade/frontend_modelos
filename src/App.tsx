@@ -5,12 +5,26 @@ import './App.css';
 import Footer from './components/Footer/index.tsx';
 import Player from './components/Player/index.tsx';
 import Sidebar from './components/Sidebar/index.tsx';
+import { Movie } from './types/movie.ts';
 
 function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
 
-  const [selectedMovie, setSelectedMovie] = useState(data[0].movies[0]);
-  // const [favoritList, setFavoritList] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
+  const [favoritList, setFavoritList] = useState<string[]>([]);
+
+  const toggleFavorite = (movieTitle: string) => {
+    setFavoritList((prevFavoritList) => {
+      if (prevFavoritList.includes(movieTitle)) {
+        return prevFavoritList.filter((fav) => fav !== movieTitle);
+      }
+      return [...prevFavoritList, movieTitle];
+    });
+  };
+
+  // useEffect(() => {
+  //   console.log('Lista de favoritos:', favoritList);
+  // }, [favoritList]);
 
   return (
     <div className="main">
@@ -21,7 +35,11 @@ function App() {
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
         />
-        <Player selectedMovie={selectedMovie} />
+        <Player
+          selectedMovie={selectedMovie}
+          favoritList={favoritList}
+          toggleFavorite={toggleFavorite}
+        />
       </div>
       <Footer />
     </div>

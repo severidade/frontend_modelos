@@ -87,7 +87,7 @@ iframe {
   position: relative;
 }
 
-.add_to_favorite{
+.favorite_button {
   background-color: var(--color-highlight);
   position: absolute;
   right: 0;
@@ -97,6 +97,10 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.favorite_button.is_favorite {
+  background-color: rgb(212, 71, 255);
 }
 
 @media only screen and (min-width: 1024px) {

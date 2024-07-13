@@ -3,9 +3,13 @@ import { Movie } from '../../types/movie.ts';
 
 type PlayerProps = {
   selectedMovie: Movie;
+  favoritList: string[];
+  toggleFavorite: (movie: string) => void;
 };
 
-function Player({ selectedMovie }: PlayerProps) {
+function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
+  const isFavorite = favoritList.includes(selectedMovie.title);
+
   return (
     <div className="player">
       {selectedMovie && (
@@ -25,9 +29,12 @@ function Player({ selectedMovie }: PlayerProps) {
             frameBorder="0"
             allowFullScreen
           />
-          <button className="add_to_favorite" type="button">
-            favoritar
-            {/* {isFavorite ? 'remover do favoritos' : 'adicionar aos favoritos'} */}
+          <button
+            className={`favorite_button ${isFavorite ? 'is_favorite' : ''} `}
+            type="button"
+            onClick={() => toggleFavorite(selectedMovie.title)}
+          >
+            {isFavorite ? 'remover do favoritos' : 'adicionar aos favoritos'}
           </button>
         </>
       )}
