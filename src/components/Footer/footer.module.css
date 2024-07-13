@@ -50,7 +50,7 @@ footer p {
 }
 
 .external_link {
-  color: var(--color-cta);
+  color: var(--color-highlight);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.3rem;
