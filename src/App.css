@@ -61,7 +61,7 @@ iframe {
 
 .app_title {
   font-family: var(--font-title-primary);
-  font-size: 5vw;
+  font-size: 11vw;
   color: var(--color-title-primary);
   text-align: center;
   line-height: 1;
@@ -91,5 +91,9 @@ iframe {
 @media only screen and (min-width: 1024px) {
   .contentWrapper {
     padding: 0 calc(var(--sidebar-width-desktop) + var(--default-gap));
+  }
+  
+  .app_title {
+    font-size: 5vw;
   }
 }
