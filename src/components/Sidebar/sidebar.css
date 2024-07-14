@@ -26,6 +26,8 @@
   left: 0;
   transition: transform 0.5s ease-in;
   padding: calc(var(--default-gap) *2);
+  scroll-behavior: smooth;
+  overflow-y: auto;
 }
 
 .menu::before{
