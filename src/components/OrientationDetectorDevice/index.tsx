@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useState } from 'react';
-import './OrientationDetectorDevice.css';
+// import './OrientationDetectorDevice.css';
+import styles from './OrientationDetectorDevice.module.css';
 import rotateDeviceImage from './assets/girar.svg';
 
 function OrientationDetectorDevice() {
@@ -34,12 +35,11 @@ function OrientationDetectorDevice() {
 
   return (
     <div
-      className={`orientation_detector 
-        ${mobileHorizontal ? 'is_mobile_horizontal' : ''}`.trim()}
+      className={` ${styles.orientation_detector} ${mobileHorizontal ? styles.is_mobile_horizontal : ''}`.trim()}
     >
-      <figure className="container_figure">
-        <img className="rotate_icon" src={rotateDeviceImage} alt="girar dispositivo" />
-        <div className="msg">
+      <figure className={`${styles.container_figure}`}>
+        <img className={`${styles.rotate_icon}`} src={rotateDeviceImage} alt="girar dispositivo" />
+        <div className={`${styles.msg}`}>
           Gire o dispositivo para a posição vertical e veja o conteúdo desta página
         </div>
       </figure>
