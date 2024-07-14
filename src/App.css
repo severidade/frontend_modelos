@@ -53,6 +53,8 @@ body {
   gap: var(--default-gap);
   position: relative;
   overflow: hidden;
+
+  position: relative;
 }
 
 iframe {

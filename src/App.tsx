@@ -6,6 +6,7 @@ import Footer from './components/Footer/index.tsx';
 import Player from './components/Player/index.tsx';
 import Sidebar from './components/Sidebar/index.tsx';
 import { Movie } from './types/movie.ts';
+import OrientationDetectorDevice from './components/OrientationDetectorDevice/index.tsx';
 
 function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
@@ -39,6 +40,7 @@ function App() {
         />
       </div>
       <Footer />
+      <OrientationDetectorDevice />
     </div>
   );
 }
