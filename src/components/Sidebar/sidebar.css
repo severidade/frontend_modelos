@@ -65,6 +65,7 @@
   position: relative;
   color: var(--color-text-primary);
   cursor: pointer;
+  border-radius: var(--default-radius);
 }
 
 .film-item-button::before {
@@ -84,8 +85,26 @@
   border-radius: var(--default-radius);
 }
 
-.film-item-button.film-item-button.selected::before {
+.film-item-button.selected::before {
   background-color: var(--color-medium-gray);
+} 
+
+.film-item-button.favorite{
+  background-color: var(--color-dark);
+  color: var(--color-text-primary);
+}
+
+
+.film-item-button.favorite.selected::before,
+.film-item-button.favorite::before
+ {
+  content: "";
+  background-color: var(--color-title-primary);
+  height: 3.4rem;
+  width: 2.5rem;
+  border-radius: 0;
+  left: 1rem;
+  top: -0.5rem;
 } 
 
 

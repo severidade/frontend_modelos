@@ -9,9 +9,15 @@ type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
   selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
+  favoritList: string[];
 };
 
-function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
+function Sidebar({
+  data,
+  selectedMovie,
+  setSelectedMovie,
+  favoritList,
+}: SidebarProps) {
   const MAX_WIDTH_MOBILE = 1024;
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -74,7 +80,11 @@ function Sidebar({ data, selectedMovie, setSelectedMovie }: SidebarProps) {
                     }
                   }}
                   type="button"
-                  className={`film-item-button ${selectedMovie.title === movie.title ? 'selected' : ''} `}
+                  className={`
+                    film-item-button 
+                    ${selectedMovie.title === movie.title ? 'selected' : ''}
+                    ${favoritList.includes(movie.title) ? 'favorite' : ''} 
+                  `}
                 >
                   {movie.title}
                 </button>

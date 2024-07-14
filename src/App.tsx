@@ -30,6 +30,7 @@ function App() {
           data={data}
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
+          favoritList={favoritList}
         />
         <Player
           selectedMovie={selectedMovie}
