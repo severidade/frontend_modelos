@@ -4,6 +4,7 @@ import { Movie } from '../../types/movie.ts';
 import { Data } from '../../types/data.ts';
 
 import './sidebar.css';
+import SidebarButton from '../SidebarButton/index.tsx';
 
 type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
@@ -71,23 +72,18 @@ function Sidebar({
             <h3 className="film_category">{category.name}</h3>
             <div className="film_list">
               {category.movies.map((movie) => (
-                <button
+                <SidebarButton
                   key={movie.id}
+                  movie={movie}
+                  isSelected={selectedMovie.title === movie.title}
+                  isFavorite={favoritList.includes(movie.title)}
                   onClick={() => {
                     setSelectedMovie(movie);
                     if (windowWidth <= MAX_WIDTH_MOBILE) {
                       toggleMenu();
                     }
                   }}
-                  type="button"
-                  className={`
-                    film-item-button 
-                    ${selectedMovie.title === movie.title ? 'selected' : ''}
-                    ${favoritList.includes(movie.title) ? 'favorite' : ''} 
-                  `}
-                >
-                  {movie.title}
-                </button>
+                />
               ))}
             </div>
           </div>
