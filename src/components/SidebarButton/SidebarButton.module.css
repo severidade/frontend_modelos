@@ -1,5 +1,6 @@
 .container_film_button {
   position: relative;
+  /* background: tomato; */
 }
 .film_item_button {
   font-size: 1.6rem;
@@ -9,6 +10,7 @@
   color: var(--color-text-primary);
   cursor: pointer;
   border-radius: var(--default-radius);
+  width: 100%;
 }
 
 .film_item_button::before {
@@ -52,3 +54,27 @@
   left: 1rem;
   top: -1rem;
 } 
+
+
+.remove_from_favorite {
+  position: absolute;
+  z-index: 2;
+  top: 0.6rem;
+  right: 0.3rem;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  text-indent: -1000%;
+  background: url(./icon/trash_withe.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+.film_item_button.favorite.selected ~ .remove_from_favorite {
+  background: url(./icon/trash_black.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}

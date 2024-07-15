@@ -16,13 +16,11 @@ function SidebarButton({
   movie, isSelected, isFavorite, onClick, key, toggleFavorite,
 }: SidebarButtonProps) {
   return (
-    <div className={styles.container_film_button}>
+    <div className={styles.container_film_button} key={key}>
       <button
-        key={key}
         onClick={onClick}
         type="button"
         className={`
-          
           ${styles.film_item_button} 
           ${isSelected ? styles.selected : ''}
           ${isFavorite ? styles.favorite : ''} 
@@ -34,6 +32,7 @@ function SidebarButton({
         <button
           type="button"
           onClick={() => toggleFavorite(movie.title)}
+          className={`${styles.remove_from_favorite} `}
         >
           Remover dos favoritos
         </button>
