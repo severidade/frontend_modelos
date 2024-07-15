@@ -32,6 +32,7 @@ function App() {
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
           favoritList={favoritList}
+          toggleFavorite={toggleFavorite}
         />
         <Player
           selectedMovie={selectedMovie}

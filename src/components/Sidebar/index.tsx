@@ -11,6 +11,7 @@ type SidebarProps = {
   selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
+  toggleFavorite: (movieTitle: string) => void;
 };
 
 function Sidebar({
@@ -18,6 +19,7 @@ function Sidebar({
   selectedMovie,
   setSelectedMovie,
   favoritList,
+  toggleFavorite,
 }: SidebarProps) {
   const MAX_WIDTH_MOBILE = 1024;
 
@@ -83,6 +85,7 @@ function Sidebar({
                       toggleMenu();
                     }
                   }}
+                  toggleFavorite={toggleFavorite}
                 />
               ))}
             </div>

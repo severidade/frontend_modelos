@@ -1,4 +1,6 @@
-
+.container_film_button {
+  position: relative;
+}
 .film_item_button {
   font-size: 1.6rem;
   line-height: 1.3;

@@ -8,25 +8,37 @@ type SidebarButtonProps = {
   isFavorite: boolean;
   onClick: () => void;
   key: number;
+  toggleFavorite: (movieTitle: string) => void;
+  // onRemoveFavorite: (movieTitle: string) => void;
 };
 
 function SidebarButton({
-  movie, isSelected, isFavorite, onClick, key,
+  movie, isSelected, isFavorite, onClick, key, toggleFavorite,
 }: SidebarButtonProps) {
   return (
-    <button
-      key={key}
-      onClick={onClick}
-      type="button"
-      className={`
-        
-        ${styles.film_item_button} 
-        ${isSelected ? styles.selected : ''}
-        ${isFavorite ? styles.favorite : ''} 
-      `}
-    >
-      {movie.title}
-    </button>
+    <div className={styles.container_film_button}>
+      <button
+        key={key}
+        onClick={onClick}
+        type="button"
+        className={`
+          
+          ${styles.film_item_button} 
+          ${isSelected ? styles.selected : ''}
+          ${isFavorite ? styles.favorite : ''} 
+        `}
+      >
+        {movie.title}
+      </button>
+      {isFavorite && (
+        <button
+          type="button"
+          onClick={() => toggleFavorite(movie.title)}
+        >
+          Remover dos favoritos
+        </button>
+      )}
+    </div>
   );
 }
 
