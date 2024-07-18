@@ -73,27 +73,16 @@ iframe {
 }
 
 .contentWrapper {
-  border: solid 1px tomato;
-  display: flex;
+  /* border: solid 1px tomato; */
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 4vw;
 }
 
-.player{
-  border: solid violet;
-  display: flex;
-  flex-direction: column;
-  width: 100% !important;
-  height: 50vh !important;
-  position: relative;
-}
 
 @media only screen and (min-width: 1024px) {
-  .contentWrapper {
-    padding: 0 calc(var(--sidebar-width-desktop) + var(--default-gap));
-  }
   
   .app_title {
     font-size: 5vw;

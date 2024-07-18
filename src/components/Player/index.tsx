@@ -1,7 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Movie } from '../../types/movie.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
+import styles from './Player.module.css';
 
 type PlayerProps = {
   selectedMovie: Movie;
@@ -10,10 +12,15 @@ type PlayerProps = {
 };
 
 function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
   const isFavorite = favoritList.includes(selectedMovie.title);
 
+  const handleThumbnailClick = () => {
+    setIsPlaying(true);
+  };
+
   return (
-    <div className="player">
+    <div className={styles.player}>
       {selectedMovie && (
         <>
           <h2>
@@ -23,17 +30,38 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
             {selectedMovie.released}
             )
           </h2>
-          <ReactPlayer
-            url={`https://www.youtube.com/watch?v=${selectedMovie.embedId}`}
-            width="100%"
-            height="315px"
-            controls
-          />
-          <FavoriteButton
-            title={selectedMovie.title}
-            isFavorite={isFavorite}
-            toggleFavorite={toggleFavorite}
-          />
+          <div className={styles.video_container}>
+
+            {isPlaying ? (
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=${selectedMovie.embedId}`}
+                width="100%"
+                height="100%"
+                controls
+                playing={isPlaying}
+              />
+            ) : (
+              <div className={styles.thumbnail_container}>
+                <img
+                  src={`https://img.youtube.com/vi/${selectedMovie.embedId}/hqdefault.jpg`}
+                  alt="Thumbnail"
+                  className="thumbnail"
+                />
+                <button
+                  onClick={handleThumbnailClick}
+                  className={styles.play_button}
+                  type="button"
+                >
+                  play
+                </button>
+              </div>
+            )}
+            <FavoriteButton
+              title={selectedMovie.title}
+              isFavorite={isFavorite}
+              toggleFavorite={toggleFavorite}
+            />
+          </div>
         </>
       )}
     </div>
