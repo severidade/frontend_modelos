@@ -30,6 +30,11 @@
   overflow-x: hidden;
 }
 
+/* .menu::-webkit-scrollbar {
+  width: 0; 
+  background: transparent; 
+} */
+
 .menu::before{
   content: "";
   position: absolute;

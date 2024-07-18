@@ -43,6 +43,11 @@ body {
   color: var(--color-text-primary);
 }
 
+body::-webkit-scrollbar {
+  width: 0; /* Esconde a barra de rolagem */
+  background: transparent; /* Esconde a barra de rolagem */
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
