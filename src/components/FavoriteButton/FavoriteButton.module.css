@@ -1,7 +1,7 @@
 .favorite_button {
   position: absolute;
-  right: 0;
-  bottom: 8rem;
+  right: 4rem;
+  bottom: 4rem;
   width: 70px;
   height: 70px;
   border-radius: 100%;
