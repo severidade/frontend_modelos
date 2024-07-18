@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+import ReactPlayer from 'react-player';
 import { Movie } from '../../types/movie.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
 
@@ -22,13 +23,11 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
             {selectedMovie.released}
             )
           </h2>
-          <iframe
-            title={selectedMovie.title}
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${selectedMovie.embedId}`}
-            frameBorder="0"
-            allowFullScreen
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=${selectedMovie.embedId}`}
+            width="100%"
+            height="315px"
+            controls
           />
           <FavoriteButton
             title={selectedMovie.title}
