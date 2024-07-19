@@ -12,6 +12,7 @@ type SidebarProps = {
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
   toggleFavorite: (movieTitle: string) => void;
+  togglePlayVideo: () => void;
 };
 
 function Sidebar({
@@ -20,6 +21,7 @@ function Sidebar({
   setSelectedMovie,
   favoritList,
   toggleFavorite,
+  togglePlayVideo,
 }: SidebarProps) {
   const MAX_WIDTH_MOBILE = 1024;
 
@@ -29,6 +31,11 @@ function Sidebar({
   const toggleMenu = useCallback(() => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   }, []);
+
+  const handleMenuClick = useCallback(() => {
+    toggleMenu();
+    togglePlayVideo();
+  }, [toggleMenu, togglePlayVideo]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,7 +67,7 @@ function Sidebar({
       {/* botao desaparece em telas maiores que MAX_WIDTH_MOBILE */}
       {windowWidth <= MAX_WIDTH_MOBILE && (
         <button
-          onClick={toggleMenu}
+          onClick={handleMenuClick}
           type="button"
           className="toggle_menu"
         >
