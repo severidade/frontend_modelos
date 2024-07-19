@@ -1,17 +1,25 @@
+@keyframes favorite-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .favorite_button {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  width: 70px;
-  height: 70px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   text-indent: -300%;
   cursor: pointer;
-
   background: url(./icons/like_icon.svg), url(./icons/Label_star.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -34,18 +42,13 @@
   transform: scale(0.9);
 }
 
-@keyframes favorite-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .favorite_button.animate {
   animation: favorite-animation 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+  .favorite_button {
+    width: 7rem;
+    height: 7rem;
+  }
 }
