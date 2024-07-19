@@ -15,7 +15,7 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const isFavorite = favoritList.includes(selectedMovie.title);
 
-  const handleThumbnailClick = () => {
+  const handlePlayVideo = () => {
     setIsPlaying(true);
   };
 
@@ -45,11 +45,11 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
                 <img
                   src={`https://img.youtube.com/vi/${selectedMovie.embedId}/hqdefault.jpg`}
                   alt="Thumbnail"
-                  className="thumbnail"
-                    // onClick={handleThumbnailClick}
+                  className={styles.thumbnail}
+                  onClick={handlePlayVideo}
                 />
                 <button
-                  onClick={handleThumbnailClick}
+                  onClick={handlePlayVideo}
                   className={styles.play_button}
                   type="button"
                 >

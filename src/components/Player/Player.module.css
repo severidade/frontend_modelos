@@ -26,10 +26,11 @@
   height: 100%;
 }
 
-.thumbnail_container > img {
+.thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .play_button {
