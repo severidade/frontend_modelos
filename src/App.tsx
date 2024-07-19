@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import data from './data/index.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
@@ -13,6 +13,7 @@ function App() {
 
   const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
   const [favoritList, setFavoritList] = useState<string[]>([]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleFavorite = (movieTitle: string) => {
     setFavoritList((prevFavoritList) => {
@@ -22,6 +23,10 @@ function App() {
       return [...prevFavoritList, movieTitle];
     });
   };
+
+  const togglePlayVideo = useCallback(() => {
+    setIsPlaying((prevIsPlaying) => !prevIsPlaying);
+  }, []);
 
   return (
     <div className="main">
@@ -37,7 +42,9 @@ function App() {
         <Player
           selectedMovie={selectedMovie}
           favoritList={favoritList}
+          isPlaying={isPlaying}
           toggleFavorite={toggleFavorite}
+          togglePlayVideo={togglePlayVideo}
         />
       </div>
       <Footer />
@@ -47,3 +54,9 @@ function App() {
 }
 
 export default App;
+
+// const [isPlaying, setIsPlaying] = useState(false);
+// const handlePlayVideo = () => {
+//   setIsPlaying((prevIsPlaying) => !prevIsPlaying);
+
+// };

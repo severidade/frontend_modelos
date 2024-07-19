@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/react-in-jsx-scope */
-import { useState } from 'react';
+// import { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Movie } from '../../types/movie.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
@@ -11,15 +11,14 @@ type PlayerProps = {
   selectedMovie: Movie;
   favoritList: string[];
   toggleFavorite: (movie: string) => void;
+  isPlaying: boolean;
+  togglePlayVideo: () => void;
 };
 
-function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
+function Player({
+  selectedMovie, favoritList, isPlaying, toggleFavorite, togglePlayVideo,
+}: PlayerProps) {
   const isFavorite = favoritList.includes(selectedMovie.title);
-
-  const handlePlayVideo = () => {
-    setIsPlaying(true);
-  };
 
   return (
     <div className={styles.player}>
@@ -48,12 +47,12 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
                   src={`https://img.youtube.com/vi/${selectedMovie.embedId}/hqdefault.jpg`}
                   alt="Thumbnail"
                   className={styles.thumbnail}
-                  onClick={handlePlayVideo}
+                  onClick={togglePlayVideo}
                 />
                 <button
-                  onClick={handlePlayVideo}
                   className={styles.play_button}
                   type="button"
+                  onClick={togglePlayVideo}
                 >
                   play
                 </button>
