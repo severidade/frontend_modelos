@@ -25,7 +25,7 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
     <div className={styles.player}>
       {selectedMovie && (
         <>
-          <h2>
+          <h2 className={styles.movie_title}>
             {selectedMovie.title}
             {' '}
             (

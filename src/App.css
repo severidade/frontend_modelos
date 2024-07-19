@@ -43,11 +43,6 @@ html {
 
 p { font-size: 1.6rem;}
 
-h2 {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 3rem;
-}
 
 body {
   background: url("./assets/black_texture.png") repeat;
