@@ -46,6 +46,7 @@ function Player({ selectedMovie, favoritList, toggleFavorite }: PlayerProps) {
                   src={`https://img.youtube.com/vi/${selectedMovie.embedId}/hqdefault.jpg`}
                   alt="Thumbnail"
                   className="thumbnail"
+                    // onClick={handleThumbnailClick}
                 />
                 <button
                   onClick={handleThumbnailClick}
