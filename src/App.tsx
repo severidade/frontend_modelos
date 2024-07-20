@@ -11,8 +11,9 @@ import OrientationDetectorDevice from './components/OrientationDetectorDevice/in
 function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
 
-  const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
   const [favoritList, setFavoritList] = useState<string[]>([]);
+
+  const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleFavorite = (movieTitle: string) => {
@@ -36,9 +37,10 @@ function App() {
           data={data}
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
+          isPlaying={isPlaying}
+          togglePlayVideo={togglePlayVideo}
           favoritList={favoritList}
           toggleFavorite={toggleFavorite}
-          togglePlayVideo={togglePlayVideo}
         />
         <Player
           selectedMovie={selectedMovie}

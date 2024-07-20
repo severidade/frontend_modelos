@@ -11,6 +11,7 @@ type SidebarProps = {
   selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
+  isPlaying: boolean;
   toggleFavorite: (movieTitle: string) => void;
   togglePlayVideo: () => void;
 };
@@ -20,6 +21,7 @@ function Sidebar({
   selectedMovie,
   setSelectedMovie,
   favoritList,
+  isPlaying,
   toggleFavorite,
   togglePlayVideo,
 }: SidebarProps) {
@@ -33,9 +35,11 @@ function Sidebar({
   }, []);
 
   const handleMenuClick = useCallback(() => {
+    if (isPlaying) {
+      togglePlayVideo();
+    }
     toggleMenu();
-    togglePlayVideo();
-  }, [toggleMenu, togglePlayVideo]);
+  }, [isPlaying, toggleMenu, togglePlayVideo]);
 
   useEffect(() => {
     const handleResize = () => {
