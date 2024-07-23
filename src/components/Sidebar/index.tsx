@@ -94,6 +94,8 @@ function Sidebar({
                     setSelectedMovie(movie);
                     if (windowWidth <= MAX_WIDTH_MOBILE) {
                       toggleMenu();
+                    } else if (isPlaying) {
+                      togglePlayVideo();
                     }
                   }}
                   toggleFavorite={toggleFavorite}
