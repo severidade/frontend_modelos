@@ -1,6 +1,6 @@
 # CineHits
 
-![Prévia da página - Preview of the page](./desktop_image.png)
+![Prévia da página - Preview of the page](./desktop_img.png)
 O CineHits é uma aplicação projetada para gerenciar uma lista fixa e pré-estabelecida de filmes. Esta lista é representada por um [objeto JSON](https://github.com/severidade/frontend_modelos/blob/movies/src/data/index.ts), simulando o retorno de uma API. O objetivo da aplicação é permitir ao usuário criar a sua lista de favoritos. 
 
 Neste primeiro momento, o gerenciamento da lista é feito com estado global, mas há planos para substituí-lo pelo Redux. A aplicação é responsiva, garantindo uma experiência de usuário consistente em diferentes dispositivos e tamanhos de tela.
