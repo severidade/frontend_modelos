@@ -6,6 +6,7 @@ import { Data } from '../../types/data.ts';
 import './sidebar.css';
 import SidebarButton from '../SidebarButton/index.tsx';
 import { useDeviceInfo } from '../../utils/useDeviceInfo.tsx';
+import MenuHamburger from '../MenuHamburger/index.tsx';
 
 type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
@@ -37,18 +38,11 @@ function Sidebar({
   return (
 
     <div className="container_sidebar">
-
-      {/* Botão só é visível em dispositivos Móveis */}
-      { isMobile && (
-        <button
-          onClick={handleMenuClick}
-          type="button"
-          className="hamburger"
-        >
-          {menuOpen ? 'Fechar Menu' : 'Abrir Menu'}
-        </button>
-      )}
-
+      <MenuHamburger
+        isMobile={isMobile}
+        menuOpen={menuOpen}
+        handleMenuClick={handleMenuClick}
+      />
       <nav className={`menu ${menuOpen ? 'open' : ''}`}>
         {data.map((category) => (
           <div key={category.id}>
