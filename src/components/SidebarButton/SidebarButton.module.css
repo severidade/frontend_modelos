@@ -1,7 +1,7 @@
 .container_film_button {
   position: relative;
-  /* background: tomato; */
 }
+
 .film_item_button {
   font-size: 1.6rem;
   line-height: 1.3;
@@ -53,9 +53,36 @@
   border-radius: 0;
   left: 1rem;
   top: -1rem;
-} 
+}
 
 
+/*Comportamento de hover do botão */
+.film_item_button:not(.selected):not(.favorite):hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-dark);
+}
+
+.film_item_button:not(.selected):not(.favorite):hover::before{
+  background-color: var(--color-dark);
+}
+
+.film_item_button.selected:hover,
+.film_item_button.favorite:hover{
+  background-color: var(--color-light-gray);
+}
+
+.film_item_button.favorite:hover{
+  color: var(--color-dark);
+}
+
+.film_item_button.favorite:hover ~ .remove_from_favorite {
+  background: url(./icon/trash_black.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+/*Botão para remover do favorito*/
 .remove_from_favorite {
   position: absolute;
   z-index: 2;
