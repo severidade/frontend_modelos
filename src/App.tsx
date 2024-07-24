@@ -57,9 +57,3 @@ function App() {
 }
 
 export default App;
-
-// const [isPlaying, setIsPlaying] = useState(false);
-// const handlePlayVideo = () => {
-//   setIsPlaying((prevIsPlaying) => !prevIsPlaying);
-
-// };

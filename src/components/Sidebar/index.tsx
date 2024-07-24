@@ -18,13 +18,7 @@ type SidebarProps = {
 };
 
 function Sidebar({
-  data,
-  selectedMovie,
-  setSelectedMovie,
-  favoritList,
-  isPlaying,
-  toggleFavorite,
-  togglePlayVideo,
+  data, selectedMovie, setSelectedMovie, favoritList, isPlaying, toggleFavorite, togglePlayVideo,
 }: SidebarProps) {
   const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
