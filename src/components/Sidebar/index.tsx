@@ -1,10 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { Movie } from '../../types/movie.ts';
 import { Data } from '../../types/data.ts';
 
 import './sidebar.css';
 import SidebarButton from '../SidebarButton/index.tsx';
+import { useDeviceInfo } from '../../utils/useDeviceInfo.tsx';
 
 type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
@@ -25,10 +26,8 @@ function Sidebar({
   toggleFavorite,
   togglePlayVideo,
 }: SidebarProps) {
-  const MAX_WIDTH_MOBILE = 1024;
-
+  const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -41,35 +40,12 @@ function Sidebar({
     toggleMenu();
   }, [isPlaying, toggleMenu, togglePlayVideo]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const newWidth = window.innerWidth;
-      setWindowWidth(newWidth);
-
-      setMenuOpen(false);
-
-      // Se a largura da tela for maior que MAX_WIDTH_MOBILE, mantenha o menu aberto
-      if (newWidth > MAX_WIDTH_MOBILE) {
-        setMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Execute o manipulador de redimensionamento ao iniciar
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
 
     <div className="container_sidebar">
 
-      {/* botao desaparece em telas maiores que MAX_WIDTH_MOBILE */}
-      {windowWidth <= MAX_WIDTH_MOBILE && (
+      {/* Botão só é visível em dispositivos Móveis */}
+      { isMobile && (
         <button
           onClick={handleMenuClick}
           type="button"
@@ -92,7 +68,7 @@ function Sidebar({
                   isFavorite={favoritList.includes(movie.title)}
                   onClick={() => {
                     setSelectedMovie(movie);
-                    if (windowWidth <= MAX_WIDTH_MOBILE) {
+                    if (isMobile) {
                       toggleMenu();
                     } else if (isPlaying) {
                       togglePlayVideo();
