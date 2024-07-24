@@ -8,7 +8,7 @@ import SidebarButton from '../SidebarButton/index.tsx';
 
 type SidebarProps = {
   data: Data[]; // Tipo para o array de categorias
-  selectedMovie: Movie; // Tipo para o filme selecionado
+  selectedMovie: Movie; // Tipo para o filme selecionadowindowWidth
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
   isPlaying: boolean;
@@ -73,7 +73,7 @@ function Sidebar({
         <button
           onClick={handleMenuClick}
           type="button"
-          className="toggle_menu"
+          className="hamburger"
         >
           {menuOpen ? 'Fechar Menu' : 'Abrir Menu'}
         </button>
