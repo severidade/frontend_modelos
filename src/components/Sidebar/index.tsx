@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Movie } from '../../types/movie.ts';
 import { Data } from '../../types/data.ts';
 
@@ -34,6 +34,12 @@ function Sidebar({
     }
     toggleMenu();
   }, [isPlaying, toggleMenu, togglePlayVideo]);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setMenuOpen(false);
+    }
+  }, [isMobile]);
 
   return (
 
