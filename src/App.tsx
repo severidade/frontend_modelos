@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useCallback, useState } from 'react';
-import data from './data/index2.ts';
+import data from './data/index.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
 import Player from './components/Player/index.tsx';
