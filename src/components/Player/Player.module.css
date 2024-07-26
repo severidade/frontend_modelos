@@ -24,6 +24,8 @@
   position: relative;
   margin: auto;
   background-color: var(--color-dark);
+  overflow: hidden;
+  border-radius: 2rem;
 }
 
 .thumbnail_container{
@@ -36,6 +38,8 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+  filter: grayscale(1);
+  mix-blend-mode: luminosity;
 }
 
 .play_button {
@@ -47,7 +51,7 @@
   overflow: hidden;
   text-indent: -1000%;
   transform: translate(-50%, -50%);
-  background: url(./img/play_button.svg);
+  background: url(./img/play_button_white.svg);
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
