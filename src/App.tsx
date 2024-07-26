@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import data from './data/index2.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
@@ -16,6 +17,9 @@ function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // ID de rastreamento do Google Analytics
+  const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
+
   const toggleFavorite = (movieTitle: string) => {
     setFavoritList((prevFavoritList) => {
       if (prevFavoritList.includes(movieTitle)) {
@@ -28,6 +32,14 @@ function App() {
   const togglePlayVideo = useCallback(() => {
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);
   }, []);
+
+  useEffect(() => {
+    // Inicializa o Google Analytics
+    if (trackingId) {
+      ReactGA.initialize(trackingId);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }, [trackingId]);
 
   return (
     <div className="main">
