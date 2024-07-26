@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-
 :root {
   --font-title-primary: 'Kalnia', serif;
   --color-title-primary: #f7c130;
@@ -43,7 +42,6 @@ html {
 
 p { font-size: 1.6rem;}
 
-
 body {
   background: url("./assets/black_texture.png") repeat;
   color: var(--color-text-primary);
@@ -64,6 +62,7 @@ body::-webkit-scrollbar {
   gap: var(--default-gap);
   position: relative;
   overflow: hidden;
+  padding-top: calc(var(--default-gap) * 2);
 }
 
 .contentWrapper {

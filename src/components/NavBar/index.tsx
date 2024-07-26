@@ -42,8 +42,6 @@ function NavBar({
   }, [isMobile]);
 
   return (
-
-    // <nav className="container_sidebar"></nav>
     <nav>
       <div className="nav-header">
         <h1 className="app_title">CineHits</h1>
