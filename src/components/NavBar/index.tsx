@@ -51,6 +51,17 @@ function NavBar({
           handleMenuClick={handleMenuClick}
         />
       </div>
+
+      { isMobile && (
+        <button
+          className={`mascara ${menuOpen ? 'open' : ' '}`}
+          type="button"
+          onClick={handleMenuClick}
+        >
+          {menuOpen ? 'Fechar Menu' : 'Abrir Menu'}
+        </button>
+      )}
+
       <div className="container_sidebar">
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
           {data.map((category) => (

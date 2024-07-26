@@ -15,6 +15,21 @@
   text-indent: -300%;
 }
 
+.mascara {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  text-indent: -1000%;
+}
+
+.mascara.open {
+  z-index: 2;
+  background-color: #000000a6;
+}
 .container_sidebar {
   border: solid 1px var(--color-text);
   top: 0;
