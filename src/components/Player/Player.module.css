@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100% !important;
   position: relative;
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 
   --video-width-mobile: 90vw;
   --video-width-desktop: 55vw;
