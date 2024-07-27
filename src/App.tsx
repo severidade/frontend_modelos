@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState } from 'react';
 import data from './data/index2.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
@@ -12,12 +12,8 @@ function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
 
   const [favoritList, setFavoritList] = useState<string[]>([]);
-
   const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  // ID de rastreamento do Google Analytics
-  const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
 
   const toggleFavorite = (movieTitle: string) => {
     setFavoritList((prevFavoritList) => {
@@ -31,25 +27,6 @@ function App() {
   const togglePlayVideo = useCallback(() => {
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);
   }, []);
-
-  useEffect(() => {
-    if (trackingId) {
-      // Cria e insere o script do Google Analytics
-      const script = document.createElement('script');
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          window.dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', trackingId);
-      };
-    }
-  }, [trackingId]);
 
   return (
     <div className="main">

@@ -15,13 +15,11 @@ jobs:
         with:
           node-version: v20.10.0
       - run: npm install
-      - run: |
-          echo "Building the project..."
-          REACT_APP_GA_TRACKING_ID=${{ secrets.REACT_APP_GA_TRACKING_ID }} npm run build
+      - run: npm run build
       - run: cp .htaccess ./dist
-      
+
       # Deploy do front
-      
+
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
