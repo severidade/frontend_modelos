@@ -1,6 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useCallback, useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
 import data from './data/index2.ts';
 import './App.css';
 import Footer from './components/Footer/index.tsx';
@@ -34,10 +33,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Inicializa o Google Analytics
     if (trackingId) {
-      ReactGA.initialize(trackingId);
-      ReactGA.pageview(window.location.pathname + window.location.search);
+      // Cria e insere o script do Google Analytics
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', trackingId);
+      };
     }
   }, [trackingId]);
 
