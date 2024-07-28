@@ -54,7 +54,7 @@ function NavBar({
 
       { isMobile && (
         <button
-          className={`mascara ${menuOpen ? 'open' : ' '}`}
+          className={`mascara ${menuOpen ? 'open' : ' '}`.trim()}
           type="button"
           onClick={handleMenuClick}
         >
@@ -63,7 +63,7 @@ function NavBar({
       )}
 
       <div className="container_sidebar">
-        <div className={`menu ${menuOpen ? 'open' : ''}`}>
+        <div className={`menu ${menuOpen ? 'open' : ''}`.trim()}>
           {data.map((category) => (
             <div key={category.id}>
               <h3 className="film_category">{category.name}</h3>

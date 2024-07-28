@@ -3,9 +3,6 @@
   flex-direction: column;
   width: 100% !important;
   position: relative;
-
-  --video-width-mobile: 90vw;
-  --video-width-desktop: 55vw;
 }
 
 .movie_title{

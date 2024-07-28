@@ -14,8 +14,11 @@
   
   --default-radius: 0.5rem;
   --default-gap: 2rem;
+
   --sidebar-width-mobile: 80vw;
   --sidebar-width-desktop: 20vw;
+  --video-width-mobile: 90vw;
+  --video-width-desktop: 55vw;
 
   width: 100vw;
   max-width: 100%;

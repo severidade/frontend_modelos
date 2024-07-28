@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--video-width-mobile);
 }
 
 .hamburger {
@@ -47,7 +48,7 @@
   position: absolute;
   left: 0;
   transition: transform 0.5s ease-in;
-  padding: calc(var(--default-gap) * 2);
+  padding: var(--default-gap);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -86,5 +87,8 @@
   .container_sidebar {
     right: 0;
     width: var(--sidebar-width-desktop);
+  }
+  .nav-header {
+    width: var(--video-width-desktop);
   }
 }
