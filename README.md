@@ -20,3 +20,5 @@ Neste primeiro momento, o gerenciamento da lista é feito com estado global, mas
 
 ### Roadmap de Melhorias
 Com o objetivo de melhorar o gerenciamento de estado e a escalabilidade da aplicação, o CineHits passará por uma atualização já prevista, que é a substituição do gerenciamento de estado global atual pelo Redux, proporcionando uma abordagem mais robusta e escalável.
+
+- [Checklist Redux](./checklist_redux.md)
