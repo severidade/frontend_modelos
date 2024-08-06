@@ -18,3 +18,5 @@ Neste primeiro momento, o gerenciamento da lista é feito com estado global, mas
 - ESLint: Ferramenta de linting para garantir a qualidade do código, configurada com as regras da [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 - React Player: Biblioteca para integrar e controlar players de vídeo.
 
+### Roadmap de Melhorias
+Com o objetivo de melhorar o gerenciamento de estado e a escalabilidade da aplicação, o CineHits passará por uma atualização já prevista, que é a substituição do gerenciamento de estado global atual pelo Redux, proporcionando uma abordagem mais robusta e escalável.
