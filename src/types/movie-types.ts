@@ -1,12 +1,12 @@
 export interface Movie {
   id: number;
-  title: string;
+  movieTitle: string;
   released: number;
   embedId: string;
 }
 
 export interface Category {
   id: number;
-  name: string;
+  categoryName: string;
   movies: Movie[]
 }

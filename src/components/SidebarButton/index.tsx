@@ -26,12 +26,12 @@ function SidebarButton({
           ${isFavorite ? styles.favorite : ''} 
         `}
       >
-        {movie.title}
+        {movie.movieTitle}
       </button>
       {isFavorite && (
         <button
           type="button"
-          onClick={() => toggleFavorite(movie.title)}
+          onClick={() => toggleFavorite(movie.movieTitle)}
           className={`${styles.remove_from_favorite} `}
         >
           Remover dos favoritos

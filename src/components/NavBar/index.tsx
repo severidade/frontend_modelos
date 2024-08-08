@@ -72,14 +72,14 @@ function NavBar({
         <div className={`menu ${menuOpen ? 'open' : ''}`.trim()}>
           {data.map((category) => (
             <div key={category.id}>
-              <h3 className="film_category">{category.name}</h3>
+              <h3 className="film_category">{category.categoryName}</h3>
               <div className="film_list">
                 {category.movies.map((movie) => (
                   <SidebarButton
                     key={movie.id}
                     movie={movie}
-                    isSelected={selectedMovie.title === movie.title}
-                    isFavorite={favoritList.includes(movie.title)}
+                    isSelected={selectedMovie.movieTitle === movie.movieTitle}
+                    isFavorite={favoritList.includes(movie.movieTitle)}
                     onClick={() => {
                       setSelectedMovie(movie);
                       if (isMobile) {

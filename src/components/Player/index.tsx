@@ -18,14 +18,14 @@ type PlayerProps = {
 function Player({
   selectedMovie, favoritList, isPlaying, toggleFavorite, togglePlayVideo,
 }: PlayerProps) {
-  const isFavorite = favoritList.includes(selectedMovie.title);
+  const isFavorite = favoritList.includes(selectedMovie.movieTitle);
 
   return (
     <div className={styles.player}>
       {selectedMovie && (
         <>
           <h2 className={styles.movie_title}>
-            {selectedMovie.title}
+            {selectedMovie.movieTitle}
             {' '}
             (
             {selectedMovie.released}
@@ -59,7 +59,7 @@ function Player({
               </div>
             )}
             <FavoriteButton
-              title={selectedMovie.title}
+              title={selectedMovie.movieTitle}
               isFavorite={isFavorite}
               toggleFavorite={toggleFavorite}
             />
