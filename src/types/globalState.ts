@@ -4,7 +4,6 @@ export interface MovieState {
   selectedMovie: Movie;
   isPlaying: boolean;
 }
-
-// export interface RootState {
-//   movies: MovieState;
-// }
+export interface RootState {
+  movie: MovieState;
+}

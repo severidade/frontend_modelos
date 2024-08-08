@@ -1,7 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useCallback, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Movie } from '../../types/movie.ts';
 import { Data } from '../../types/data.ts';
+import { RootState } from '../../types/globalState.ts';
 
 import './NavBar.css';
 import SidebarButton from '../SidebarButton/index.tsx';
@@ -10,7 +12,7 @@ import MenuHamburger from '../MenuHamburger/index.tsx';
 
 type NavBarProps = {
   data: Data[]; // Tipo para o array de categorias
-  selectedMovie: Movie; // Tipo para o filme selecionadowindowWidth
+  selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
   isPlaying: boolean;
@@ -23,6 +25,11 @@ function NavBar({
 }: NavBarProps) {
   const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // importa do redux os dados do estado global
+  const selectedMovieFromRedux = useSelector((state: RootState) => state.movie.selectedMovie);
+  // imprime no console o resultado
+  console.log('Estado do Redux: ', selectedMovieFromRedux);
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
