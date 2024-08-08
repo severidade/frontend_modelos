@@ -1,7 +1,8 @@
-import { Movie } from './movie.ts';
+import { Movie, Category } from './movie-types.ts';
 
 export interface MovieState {
   selectedMovie: Movie;
+  movieList: Category[];
   isPlaying: boolean;
 }
 export interface RootState {

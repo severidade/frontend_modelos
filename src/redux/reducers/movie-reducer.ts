@@ -6,6 +6,7 @@ import { SELECT_MOVIE } from '../actions/movieActions.ts';
 
 const INITIAL_STATE: MovieState = {
   selectedMovie: data[0].movies[0],
+  movieList: data,
   isPlaying: false,
 };
 
