@@ -26,7 +26,7 @@ function NavBar({
   const [menuOpen, setMenuOpen] = useState(false);
 
   // importa do redux os dados do estado global
-  const selectedMovieFromRedux = useSelector((state: RootState) => state.movie.selectedMovie);
+  const selectedMovieFromRedux = useSelector((state: RootState) => state.movie);
   // imprime no console o resultado
   console.log('Estado do Redux: ', selectedMovieFromRedux);
 
@@ -70,7 +70,7 @@ function NavBar({
 
       <div className="container_sidebar">
         <div className={`menu ${menuOpen ? 'open' : ''}`.trim()}>
-          {data.map((category) => (
+          {selectedMovieFromRedux.movieList.map((category) => (
             <div key={category.id}>
               <h3 className="film_category">{category.categoryName}</h3>
               <div className="film_list">
