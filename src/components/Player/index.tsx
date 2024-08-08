@@ -3,7 +3,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import { useState } from 'react';
 import ReactPlayer from 'react-player';
-import { Movie } from '../../types/movie.ts';
+import { Movie } from '../../types/movie-types.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
 import styles from './Player.module.css';
 

@@ -1,7 +1,7 @@
 /* eslint-disable default-param-last */
 import { Action } from 'redux';
 import data from '../../data/index2.ts';
-import { MovieState } from '../../types/globalState.ts';
+import { MovieState } from '../../types/global-state-types.ts';
 import { SELECT_MOVIE } from '../actions/movieActions.ts';
 
 const INITIAL_STATE: MovieState = {

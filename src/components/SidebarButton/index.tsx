@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styles from './SidebarButton.module.css';
-import { Movie } from '../../types/movie.ts';
+import { Movie } from '../../types/movie-types.ts';
 
 type SidebarButtonProps = {
   movie: Movie;
