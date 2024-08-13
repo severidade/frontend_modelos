@@ -2,7 +2,7 @@
 import { Action } from 'redux';
 import data from '../../data/index2.ts';
 import { MovieState } from '../../types/global-state-types.ts';
-import { SELECT_MOVIE } from '../actions/movieActions.ts';
+import { SELECT_MOVIE, TOGGLE_PLAYING } from '../actions/movieActions.ts';
 
 const INITIAL_STATE: MovieState = {
   selectedMovie: data[0].movies[0],
@@ -16,6 +16,11 @@ const movieReducer = (state: MovieState = INITIAL_STATE, action: Action) => {
       return {
         ...state,
         selectedMovie: action.payload,
+      };
+    case TOGGLE_PLAYING:
+      return {
+        ...state,
+        isPlaying: !state.isPlaying,
       };
     default:
       return state;

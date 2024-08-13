@@ -26,7 +26,7 @@ function App() {
 
   const togglePlayVideo = useCallback(() => {
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);
-  }, []);
+  }, []); /* nao mais */
 
   return (
     <div className="main">
@@ -43,9 +43,9 @@ function App() {
         <Player
           selectedMovie={selectedMovie}
           favoritList={favoritList}
-          isPlaying={isPlaying}
           toggleFavorite={toggleFavorite}
-          togglePlayVideo={togglePlayVideo}
+          /* isPlaying={isPlaying}  nao mais */
+          /* togglePlayVideo={togglePlayVideo}  nao mais */
         />
       </div>
       <Footer />
