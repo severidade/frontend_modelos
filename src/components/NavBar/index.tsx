@@ -1,36 +1,31 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useCallback, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Movie } from '../../types/movie-types.ts';
 import { RootState } from '../../types/global-state-types.ts';
 
 import './NavBar.css';
 import SidebarButton from '../SidebarButton/index.tsx';
 import { useDeviceInfo } from '../../utils/useDeviceInfo.tsx';
 import MenuHamburger from '../MenuHamburger/index.tsx';
-import { togglePlayVideo } from '../../redux/actions/movieActions.ts';
+import { togglePlayVideo, toggleSelectedMovie } from '../../redux/actions/movieActions.ts';
 
 type NavBarProps = {
-  selectedMovie: Movie; // Tipo para o filme selecionado
-  setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
   toggleFavorite: (movieTitle: string) => void;
 
 };
 
 function NavBar({
-  selectedMovie, setSelectedMovie, favoritList, toggleFavorite,
+  favoritList, toggleFavorite,
 }: NavBarProps) {
   const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const dispatch = useDispatch();
-  const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
 
-  // importa do redux os dados do estado global
-  const selectedMovieFromRedux = useSelector((state: RootState) => state.movie);
-  // imprime no console o resultado
-  console.log('Estado do Redux: ', selectedMovieFromRedux);
+  const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
+  const movieList = useSelector((state: RootState) => state.movie.movieList);
+  const selectedMovie = useSelector((state: RootState) => state.movie.selectedMovie);
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -72,7 +67,7 @@ function NavBar({
 
       <div className="container_sidebar">
         <div className={`menu ${menuOpen ? 'open' : ''}`.trim()}>
-          {selectedMovieFromRedux.movieList.map((category) => (
+          {movieList.map((category) => (
             <div key={category.id}>
               <h3 className="film_category">{category.categoryName}</h3>
               <div className="film_list">
@@ -83,7 +78,7 @@ function NavBar({
                     isSelected={selectedMovie.movieTitle === movie.movieTitle}
                     isFavorite={favoritList.includes(movie.movieTitle)}
                     onClick={() => {
-                      setSelectedMovie(movie);
+                      dispatch(toggleSelectedMovie(movie));
                       if (isMobile) {
                         toggleMenu();
                       } else if (isPlaying) {

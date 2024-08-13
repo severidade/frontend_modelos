@@ -5,22 +5,22 @@ import ReactPlayer from 'react-player';
 import { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { togglePlayVideo } from '../../redux/actions/movieActions.ts';
-import { Movie } from '../../types/movie-types.ts';
 import { RootState } from '../../types/global-state-types.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
 import styles from './Player.module.css';
 
 type PlayerProps = {
-  selectedMovie: Movie;
   favoritList: string[];
   toggleFavorite: (movie: string) => void;
 };
 
 function Player({
-  selectedMovie, favoritList, toggleFavorite,
+  // selectedMovie,
+  favoritList, toggleFavorite,
 }: PlayerProps) {
   const dispatch = useDispatch();
   const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
+  const selectedMovie = useSelector((state: RootState) => state.movie.selectedMovie);
   const isFavorite = favoritList.includes(selectedMovie.movieTitle);
 
   const handlePlayToggle = useCallback(() => {

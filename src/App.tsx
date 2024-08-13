@@ -12,7 +12,6 @@ function App() {
   // Inicializa o estado com o primeiro filme da primeira categoria
 
   const [favoritList, setFavoritList] = useState<string[]>([]);
-  const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
 
   const toggleFavorite = (movieTitle: string) => {
     setFavoritList((prevFavoritList) => {
@@ -26,14 +25,11 @@ function App() {
   return (
     <div className="main">
       <NavBar
-        selectedMovie={selectedMovie}
-        setSelectedMovie={setSelectedMovie}
         favoritList={favoritList}
         toggleFavorite={toggleFavorite}
       />
       <div className="contentWrapper">
         <Player
-          selectedMovie={selectedMovie}
           favoritList={favoritList}
           toggleFavorite={toggleFavorite}
         />
