@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/react-in-jsx-scope */
-// import { useState } from 'react';
 import ReactPlayer from 'react-player';
+import { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { togglePlayVideo } from '../../redux/actions/movieActions.ts';
 import { Movie } from '../../types/movie-types.ts';
+import { RootState } from '../../types/global-state-types.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
 import styles from './Player.module.css';
 
@@ -11,14 +14,23 @@ type PlayerProps = {
   selectedMovie: Movie;
   favoritList: string[];
   toggleFavorite: (movie: string) => void;
-  isPlaying: boolean;
-  togglePlayVideo: () => void;
+  /* isPlaying e togglePlayVideo estão vindo do redux */
+  /*  isPlaying: boolean; */
+  /*  togglePlayVideo: () => void; */
 };
 
 function Player({
-  selectedMovie, favoritList, isPlaying, toggleFavorite, togglePlayVideo,
+  /* isPlaying, togglePlayVideo */
+  selectedMovie, favoritList, toggleFavorite,
 }: PlayerProps) {
+  const dispatch = useDispatch();
+  const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
+
   const isFavorite = favoritList.includes(selectedMovie.movieTitle);
+
+  const handlePlayToggle = useCallback(() => {
+    dispatch(togglePlayVideo());
+  }, [dispatch]);
 
   return (
     <div className={styles.player}>
@@ -32,7 +44,6 @@ function Player({
             )
           </h2>
           <div className={styles.video_container}>
-
             {isPlaying ? (
               <ReactPlayer
                 url={`https://www.youtube.com/watch?v=${selectedMovie.embedId}`}
@@ -47,12 +58,12 @@ function Player({
                   src={`https://img.youtube.com/vi/${selectedMovie.embedId}/hqdefault.jpg`}
                   alt="Thumbnail"
                   className={styles.thumbnail}
-                  onClick={togglePlayVideo}
+                  onClick={handlePlayToggle}
                 />
                 <button
                   className={styles.play_button}
                   type="button"
-                  onClick={togglePlayVideo}
+                  onClick={handlePlayToggle}
                 >
                   play
                 </button>
