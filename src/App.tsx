@@ -13,7 +13,6 @@ function App() {
 
   const [favoritList, setFavoritList] = useState<string[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<Movie>(data[0].movies[0]);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleFavorite = (movieTitle: string) => {
     setFavoritList((prevFavoritList) => {
@@ -24,18 +23,11 @@ function App() {
     });
   };
 
-  const togglePlayVideo = useCallback(() => {
-    setIsPlaying((prevIsPlaying) => !prevIsPlaying);
-  }, []); /* nao mais */
-
   return (
     <div className="main">
       <NavBar
-        data={data}
         selectedMovie={selectedMovie}
         setSelectedMovie={setSelectedMovie}
-        isPlaying={isPlaying}
-        togglePlayVideo={togglePlayVideo}
         favoritList={favoritList}
         toggleFavorite={toggleFavorite}
       />
@@ -44,8 +36,6 @@ function App() {
           selectedMovie={selectedMovie}
           favoritList={favoritList}
           toggleFavorite={toggleFavorite}
-          /* isPlaying={isPlaying}  nao mais */
-          /* togglePlayVideo={togglePlayVideo}  nao mais */
         />
       </div>
       <Footer />

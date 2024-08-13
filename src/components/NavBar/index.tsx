@@ -1,29 +1,31 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useCallback, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { Movie, Category } from '../../types/movie-types.ts';
+import { useSelector, useDispatch } from 'react-redux';
+import { Movie } from '../../types/movie-types.ts';
 import { RootState } from '../../types/global-state-types.ts';
 
 import './NavBar.css';
 import SidebarButton from '../SidebarButton/index.tsx';
 import { useDeviceInfo } from '../../utils/useDeviceInfo.tsx';
 import MenuHamburger from '../MenuHamburger/index.tsx';
+import { togglePlayVideo } from '../../redux/actions/movieActions.ts';
 
 type NavBarProps = {
-  data: Category[]; // Tipo para o array de categorias
   selectedMovie: Movie; // Tipo para o filme selecionado
   setSelectedMovie: (movie: Movie) => void; // Tipo para a função que seleciona o filme
   favoritList: string[];
-  isPlaying: boolean;
   toggleFavorite: (movieTitle: string) => void;
-  togglePlayVideo: () => void;
+
 };
 
 function NavBar({
-  data, selectedMovie, setSelectedMovie, favoritList, isPlaying, toggleFavorite, togglePlayVideo,
+  selectedMovie, setSelectedMovie, favoritList, toggleFavorite,
 }: NavBarProps) {
   const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const dispatch = useDispatch();
+  const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
 
   // importa do redux os dados do estado global
   const selectedMovieFromRedux = useSelector((state: RootState) => state.movie);
@@ -36,10 +38,10 @@ function NavBar({
 
   const handleMenuClick = useCallback(() => {
     if (isPlaying) {
-      togglePlayVideo();
+      dispatch(togglePlayVideo());
     }
     toggleMenu();
-  }, [isPlaying, toggleMenu, togglePlayVideo]);
+  }, [isPlaying, toggleMenu, dispatch]);
 
   useEffect(() => {
     if (!isMobile) {
@@ -85,7 +87,7 @@ function NavBar({
                       if (isMobile) {
                         toggleMenu();
                       } else if (isPlaying) {
-                        togglePlayVideo();
+                        dispatch(togglePlayVideo());
                       }
                     }}
                     toggleFavorite={toggleFavorite}

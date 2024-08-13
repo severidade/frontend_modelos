@@ -14,18 +14,13 @@ type PlayerProps = {
   selectedMovie: Movie;
   favoritList: string[];
   toggleFavorite: (movie: string) => void;
-  /* isPlaying e togglePlayVideo estão vindo do redux */
-  /*  isPlaying: boolean; */
-  /*  togglePlayVideo: () => void; */
 };
 
 function Player({
-  /* isPlaying, togglePlayVideo */
   selectedMovie, favoritList, toggleFavorite,
 }: PlayerProps) {
   const dispatch = useDispatch();
   const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
-
   const isFavorite = favoritList.includes(selectedMovie.movieTitle);
 
   const handlePlayToggle = useCallback(() => {
