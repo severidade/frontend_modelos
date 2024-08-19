@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100% !important;
   position: relative;
+  gap: 4vw;
 }
 
 .movie_title{

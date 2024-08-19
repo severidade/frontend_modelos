@@ -9,14 +9,7 @@ import { useDeviceInfo } from '../../utils/useDeviceInfo.tsx';
 import MenuHamburger from '../MenuHamburger/index.tsx';
 import { togglePlayVideo, toggleSelectedMovie } from '../../redux/actions/movieActions.ts';
 
-type NavBarProps = {
-  favoritList: string[];
-  toggleFavorite: (movieTitle: string) => void;
-};
-
-function NavBar({
-  favoritList, toggleFavorite,
-}: NavBarProps) {
+function NavBar() {
   const { isMobile } = useDeviceInfo();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -75,7 +68,6 @@ function NavBar({
                     key={movie.id}
                     movie={movie}
                     isSelected={selectedMovie.movieTitle === movie.movieTitle}
-                    isFavorite={favoritList.includes(movie.movieTitle)}
                     onClick={() => {
                       dispatch(toggleSelectedMovie(movie));
                       if (isMobile) {
@@ -84,7 +76,10 @@ function NavBar({
                         dispatch(togglePlayVideo());
                       }
                     }}
+                    /*
+                    isFavorite={favoritesList.includes(movie.movieTitle)}
                     toggleFavorite={toggleFavorite}
+                    */
                   />
                 ))}
               </div>
