@@ -25,10 +25,10 @@ function SidebarButton({
         onClick={onClick}
         type="button"
         className={`
-          ${styles.film_item_button} 
-          ${isFavorite ? styles.favorite : ''} 
+          ${styles.film_item_button}
+          ${isFavorite ? styles.favorite : ''}
           ${isSelected ? styles.selected : ''}
-        `}
+        `.trim()}
       >
         {movie.movieTitle}
       </button>
@@ -36,7 +36,7 @@ function SidebarButton({
         <button
           type="button"
           onClick={() => dispatch(removeFavorite(movie.movieTitle))}
-          className={`${styles.remove_from_favorite} `}
+          className={`${styles.remove_from_favorite}`}
         >
           Remover dos favoritos
         </button>
