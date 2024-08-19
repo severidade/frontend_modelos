@@ -1,16 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useCallback, useState } from 'react';
-import data from './data/index2.ts';
+import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar/index.tsx';
 import Player from './components/Player/index.tsx';
 import Footer from './components/Footer/index.tsx';
 import OrientationDetectorDevice from './components/OrientationDetectorDevice/index.tsx';
-import { Movie } from './types/movie-types.ts';
 
 function App() {
-  // Inicializa o estado com o primeiro filme da primeira categoria
-
   const [favoritList, setFavoritList] = useState<string[]>([]);
 
   const toggleFavorite = (movieTitle: string) => {
@@ -20,6 +16,7 @@ function App() {
       }
       return [...prevFavoritList, movieTitle];
     });
+    console.log(favoritList);
   };
 
   return (
@@ -29,10 +26,7 @@ function App() {
         toggleFavorite={toggleFavorite}
       />
       <div className="contentWrapper">
-        <Player
-          favoritList={favoritList}
-          toggleFavorite={toggleFavorite}
-        />
+        <Player />
       </div>
       <Footer />
       <OrientationDetectorDevice />

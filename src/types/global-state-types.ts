@@ -5,6 +5,10 @@ export interface MovieState {
   movieList: Category[];
   isPlaying: boolean;
 }
+export interface FavoritesListSate {
+  favoritesList: string[];
+}
 export interface RootState {
   movie: MovieState;
+  favorites: FavoritesListSate;
 }

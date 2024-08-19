@@ -12,7 +12,6 @@ import { togglePlayVideo, toggleSelectedMovie } from '../../redux/actions/movieA
 type NavBarProps = {
   favoritList: string[];
   toggleFavorite: (movieTitle: string) => void;
-
 };
 
 function NavBar({

@@ -9,19 +9,10 @@ import { RootState } from '../../types/global-state-types.ts';
 import FavoriteButton from '../FavoriteButton/index.tsx';
 import styles from './Player.module.css';
 
-type PlayerProps = {
-  favoritList: string[];
-  toggleFavorite: (movie: string) => void;
-};
-
-function Player({
-  // selectedMovie,
-  favoritList, toggleFavorite,
-}: PlayerProps) {
+function Player() {
   const dispatch = useDispatch();
   const isPlaying = useSelector((state: RootState) => state.movie.isPlaying);
   const selectedMovie = useSelector((state: RootState) => state.movie.selectedMovie);
-  const isFavorite = favoritList.includes(selectedMovie.movieTitle);
 
   const handlePlayToggle = useCallback(() => {
     dispatch(togglePlayVideo());
@@ -64,11 +55,7 @@ function Player({
                 </button>
               </div>
             )}
-            <FavoriteButton
-              title={selectedMovie.movieTitle}
-              isFavorite={isFavorite}
-              toggleFavorite={toggleFavorite}
-            />
+            <FavoriteButton title={selectedMovie.movieTitle} />
           </div>
         </>
       )}
